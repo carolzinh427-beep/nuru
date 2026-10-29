@@ -44,8 +44,8 @@ export const SERVICES = [
       pt: "Massagem Mix Body-to-Body"
     },
     description: {
-      en: "A sensual and relaxing experience combining sensual touch, deep tissue techniques and body-to-body massage. Warm massage oil enhances the smooth movements, creating a relaxing and immersive experience.",
-      pt: "Uma experiência sensual e relaxante que combina toque sensual, técnicas de tecido profundo e massagem corpo a corpo. O óleo de massagem aquecido realça os movimentos suaves, criando uma experiência relaxante e envolvente."
+      en: "A sensual, slow-burning experience combining deep touch, flowing body-to-body movement and warm oil. Every motion is designed to dissolve tension and awaken the senses in complete privacy.",
+      pt: "Uma experiência sensual e envolvente que combina toque profundo, movimentos corpo a corpo fluidos e óleo aquecido. Cada gesto é pensado para dissolver tensões e despertar os sentidos em total privacidade."
     },
     whatsappKey: "service1",
     image: IMAGES.detailImage
@@ -57,8 +57,8 @@ export const SERVICES = [
       pt: "Massagem Nuru"
     },
     description: {
-      en: "Experience a traditional Nuru massage using luxurious Nuru gel. The session combines sensual touch and deep tissue techniques with smooth, flowing body-to-body movements.",
-      pt: "Experimente uma massagem Nuru tradicional, utilizando o luxuoso gel Nuru. A sessão combina toque sensual e técnicas de tecido profundo com movimentos corpo a corpo suaves e fluidos."
+      en: "A traditional Nuru ritual performed with luxurious, silken gel. Skin against skin, slow and deliberate, in an atmosphere built entirely around pleasure and discretion.",
+      pt: "Um ritual Nuru tradicional, realizado com um gel luxuoso e sedoso. Pele contra pele, em movimentos lentos e deliberados, dentro de uma atmosfera construída inteiramente em torno do prazer e da discrição."
     },
     whatsappKey: "service2",
     image: IMAGES.treatmentRoomImage
@@ -76,16 +76,16 @@ export const CONTENT = {
       cta: "Contact via WhatsApp"
     },
     hero: {
-      title: "Relaxation, privacy and a unique massage experience.",
-      subtitle: "Enjoy a unique massage experience in a comfortable, clean and discreet environment, conveniently located in Central London near Victoria Station.",
-      note: "Open every day from 10:00 AM to 11:00 PM.",
+      title: "Where darkness meets touch, and touch becomes pleasure.",
+      subtitle: "Step into a private, gold-lit sanctuary in Central London, near Victoria Station — designed for those who seek more than relaxation.",
+      note: "Open every day, 10:00 AM to 11:00 PM.",
       ctaPrimary: "Contact via WhatsApp",
       ctaSecondary: "Explore the massage menu"
     },
     intro: {
       eyebrow: "Central London",
-      title: "A calm and discreet setting in Central London.",
-      text: "Enjoy a unique massage experience in a comfortable, clean and discreet environment, conveniently located near Victoria Station, London.",
+      title: "An intimate space, hidden in plain sight.",
+      text: "Behind a quiet door near Victoria Station lies a space built entirely for sensation — low light, warm gold, and complete privacy.",
       note: "Your comfort, privacy and well-being are always a priority.",
       indicators: ["Near Victoria Station", "Open every day", "10 AM – 11 PM"]
     },
@@ -98,30 +98,30 @@ export const CONTENT = {
       footNote: "For prices, availability and further information about my massage services, please contact me directly via WhatsApp."
     },
     experience: {
-      eyebrow: "Comfort",
-      title: "Designed around your comfort.",
+      eyebrow: "Comfort & Luxury",
+      title: "Designed around your pleasure and discretion.",
       pillars: [
         {
           number: "01",
-          title: "Privacy",
-          text: "A discreet environment designed to help you feel comfortable throughout your visit."
+          title: "Absolute Privacy",
+          text: "A discreet, secluded environment designed to ensure you feel entirely comfortable throughout your visit."
         },
         {
           number: "02",
-          title: "Cleanliness",
-          text: "A comfortable and carefully maintained setting for every appointment."
+          title: "Sensory Atmosphere",
+          text: "Warm ambient light, luxurious linens and carefully warmed oils prepared exclusively for each appointment."
         },
         {
           number: "03",
-          title: "Well-being",
-          text: "Your comfort and personal boundaries remain a priority throughout the experience."
+          title: "Refined Well-being",
+          text: "Your personal comfort and boundaries remain the absolute priority throughout the entire encounter."
         }
       ]
     },
     about: {
-      eyebrow: "About the Experience",
+      eyebrow: "About the Sanctuary",
       title: "A private moment to slow down.",
-      text: "Whether you are looking to relax, release tension or enjoy a more immersive massage experience, each session takes place in a calm, clean and discreet environment in Central London.",
+      text: "Whether you seek deep release or an enveloping, immersive massage experience, each ritual unfolds in a calm, discreet sanctuary in Central London.",
       note: "Please get in touch directly via WhatsApp for prices, availability and further information.",
       cta: "Get in touch"
     },
@@ -133,7 +133,7 @@ export const CONTENT = {
         near: "Near Victoria Station",
         hours: "Every day, 10:00 AM – 11:00 PM"
       },
-      text: "Conveniently located in Central London, with easy access from Victoria Station.",
+      text: "Conveniently located in Central London, with discreet and easy access from Victoria Station.",
       cta: "Open location in Google Maps"
     },
     contact: {
@@ -147,7 +147,7 @@ export const CONTENT = {
       hoursValue: "10:00 AM – 11:00 PM"
     },
     footer: {
-      tagline: "A discreet massage experience in Central London.",
+      tagline: "A discreet and luxurious massage sanctuary in Central London.",
       linksTitle: "Explore",
       contactTitle: "Contact",
       hoursTitle: "Hours",
@@ -165,16 +165,16 @@ export const CONTENT = {
       cta: "Falar pelo WhatsApp"
     },
     hero: {
-      title: "Relaxamento, privacidade e uma experiência única de massagem.",
-      subtitle: "Desfrute de uma experiência única de massagem em um ambiente confortável, limpo e discreto, convenientemente localizado no centro de Londres, próximo à Victoria Station.",
-      note: "Aberto todos os dias das 10h às 23h.",
+      title: "Onde a escuridão encontra o toque, e o toque se torna prazer.",
+      subtitle: "Entre em um santuário privado e iluminado a ouro no centro de Londres, próximo à Victoria Station — criado para quem busca mais do que relaxamento.",
+      note: "Aberto todos os dias, das 10h às 23h.",
       ctaPrimary: "Falar pelo WhatsApp",
       ctaSecondary: "Conhecer as massagens"
     },
     intro: {
       eyebrow: "Centro de Londres",
-      title: "Um ambiente calmo e discreto no centro de Londres.",
-      text: "Desfrute de uma experiência única de massagem em um ambiente confortável, limpo e discreto, convenientemente localizado próximo à Victoria Station, Londres.",
+      title: "Um espaço íntimo, escondido aos olhos de todos.",
+      text: "Atrás de uma porta discreta perto da Victoria Station está um espaço criado inteiramente para a sensação — pouca luz, ouro quente e total privacidade.",
       note: "Seu conforto, sua privacidade e seu bem-estar são sempre prioridade.",
       indicators: ["Próximo à Victoria Station", "Aberto todos os dias", "10h às 23h"]
     },
@@ -187,30 +187,30 @@ export const CONTENT = {
       footNote: "Para saber preços, disponibilidade e mais informações sobre os serviços de massagem, entre em contato diretamente pelo WhatsApp."
     },
     experience: {
-      eyebrow: "Conforto",
-      title: "Pensado para o seu conforto.",
+      eyebrow: "Conforto e Luxo",
+      title: "Pensado para o seu prazer e discrição.",
       pillars: [
         {
           number: "01",
-          title: "Privacidade",
-          text: "Um ambiente discreto, pensado para que você se sinta confortável durante toda a visita."
+          title: "Privacidade Absoluta",
+          text: "Um ambiente reservado e discreto, planejado para que você se sinta completamente à vontade durante toda a visita."
         },
         {
           number: "02",
-          title: "Limpeza",
-          text: "Um ambiente confortável e cuidadosamente mantido para cada atendimento."
+          title: "Atmosfera Sensorial",
+          text: "Iluminação suave, toalhas nobres e óleos aquecidos preparados exclusivamente para cada atendimento."
         },
         {
           number: "03",
-          title: "Bem-estar",
-          text: "Seu conforto e seus limites pessoais permanecem prioridade durante toda a experiência."
+          title: "Bem-estar Refinado",
+          text: "Seu conforto pessoal e seus limites permanecem prioridade absoluta durante toda a experiência."
         }
       ]
     },
     about: {
-      eyebrow: "Sobre a Experiência",
+      eyebrow: "Sobre o Santuário",
       title: "Um momento privado para desacelerar.",
-      text: "Seja para relaxar, liberar tensões ou desfrutar de uma experiência de massagem mais envolvente, cada sessão acontece em um ambiente calmo, limpo e discreto no centro de Londres.",
+      text: "Seja para relaxar profundamente ou desfrutar de uma experiência de massagem mais envolvente, cada sessão acontece em um ambiente calmo, limpo e discreto no centro de Londres.",
       note: "Entre em contato diretamente pelo WhatsApp para preços, disponibilidade e mais informações.",
       cta: "Entre em contato"
     },
@@ -222,7 +222,7 @@ export const CONTENT = {
         near: "Próximo à Victoria Station",
         hours: "Todos os dias, das 10h às 23h"
       },
-      text: "Convenientemente localizado no centro de Londres, com fácil acesso a partir da Victoria Station.",
+      text: "Convenientemente localizado no centro de Londres, com acesso discreto e fácil a partir da Victoria Station.",
       cta: "Abrir localização no Google Maps"
     },
     contact: {
@@ -236,7 +236,7 @@ export const CONTENT = {
       hoursValue: "10h às 23h"
     },
     footer: {
-      tagline: "Uma experiência de massagem discreta no centro de Londres.",
+      tagline: "Um santuário de massagem discreto e luxuoso no centro de Londres.",
       linksTitle: "Explorar",
       contactTitle: "Contato",
       hoursTitle: "Horários",
@@ -245,4 +245,3 @@ export const CONTENT = {
     }
   }
 };
-

@@ -8,14 +8,12 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
   const dialogRef = useRef(null);
   const closeButtonRef = useRef(null);
 
-  // Lock scroll & handle Escape / focus trap
   useEffect(() => {
     if (!isOpen) return;
 
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
 
-    // Focus initial element
     const timeout = setTimeout(() => {
       if (closeButtonRef.current) {
         closeButtonRef.current.focus();
@@ -92,15 +90,15 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
       role="dialog"
       aria-modal="true"
       aria-label="Navigation Menu"
-      className="fixed inset-0 z-50 bg-deep-blue text-off-white flex flex-col justify-between p-6 sm:p-10 animate-fade-in"
+      className="fixed inset-0 z-50 bg-dark-deep text-cream-text flex flex-col justify-between p-6 sm:p-10"
     >
       {/* Top row */}
-      <div className="flex items-center justify-between border-b border-line-soft/20 pb-6">
+      <div className="flex items-center justify-between border-b border-border-subtle pb-6">
         <div>
-          <span className="font-serif tracking-widest text-lg font-normal text-off-white block">
+          <span className="font-serif tracking-widest text-lg font-normal text-cream-text block">
             NURU
           </span>
-          <span className="text-[10px] tracking-[0.25em] text-warm-beige block uppercase">
+          <span className="text-[10px] tracking-[0.3em] text-gold-main block uppercase font-medium">
             MASSAGE LONDON
           </span>
         </div>
@@ -110,7 +108,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
           type="button"
           onClick={onClose}
           aria-label="Close navigation menu"
-          className="p-2 text-off-white/80 hover:text-off-white focus-visible:outline-warm-beige"
+          className="p-2 text-gray-warm hover:text-gold-main focus-visible:outline-gold-main"
         >
           <svg
             className="w-7 h-7"
@@ -137,9 +135,9 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
               <a
                 href={item.href}
                 onClick={handleLinkClick}
-                className="font-serif text-3xl sm:text-4xl text-off-white/90 hover:text-warm-beige transition-colors duration-200 block"
+                className="font-serif text-3xl sm:text-4xl text-cream-text hover:text-gold-main transition-colors duration-200 block"
               >
-                <span className="text-xs text-warm-beige/70 font-sans tracking-widest mr-4 inline-block">
+                <span className="text-xs text-gold-main/60 font-sans tracking-widest mr-4 inline-block">
                   0{idx + 1}
                 </span>
                 {item.label}
@@ -150,18 +148,18 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
       </nav>
 
       {/* Bottom Area */}
-      <div className="border-t border-line-soft/20 pt-6 space-y-6">
+      <div className="border-t border-border-subtle pt-6 space-y-6">
         <div className="flex items-center justify-between">
-          <span className="text-xs tracking-widest text-off-white/60 uppercase">
+          <span className="text-xs tracking-widest text-gray-warm uppercase">
             Language
           </span>
-          <LanguageSwitcher isScrolled={false} />
+          <LanguageSwitcher isScrolled={true} />
         </div>
 
         <button
           type="button"
           onClick={handleWhatsappClick}
-          className="btn-hero-primary w-full text-center"
+          className="btn-primary w-full text-center"
         >
           {t.nav.cta}
         </button>
@@ -171,4 +169,3 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
 }
 
 export default MobileMenu;
-

@@ -38,29 +38,21 @@ export function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-off-white/95 backdrop-blur-sm border-b border-line-soft py-3 shadow-sm text-text-dark'
-            : 'bg-transparent py-5 text-off-white'
+            ? 'bg-dark-deep/95 backdrop-blur-md border-b border-border-subtle py-3 text-cream-text'
+            : 'bg-transparent py-5 text-cream-text'
         }`}
       >
         <div className="container-max flex items-center justify-between">
           {/* Logo */}
           <a
             href="#home"
-            className="group flex flex-col focus-visible:outline-slate-blue"
+            className="group flex flex-col focus-visible:outline-gold-main"
             aria-label="Nuru Massage London - Home"
           >
-            <span
-              className={`font-serif text-xl sm:text-2xl tracking-[0.2em] font-normal transition-colors duration-200 ${
-                isScrolled ? 'text-deep-blue' : 'text-off-white'
-              }`}
-            >
+            <span className="font-serif text-xl sm:text-2xl tracking-[0.2em] font-normal text-cream-text transition-colors duration-200 group-hover:text-gold-light">
               NURU
             </span>
-            <span
-              className={`text-[9px] sm:text-[10px] tracking-[0.28em] uppercase -mt-1 font-medium transition-colors duration-200 ${
-                isScrolled ? 'text-slate-blue' : 'text-warm-beige'
-              }`}
-            >
+            <span className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase -mt-1 font-medium text-gold-main">
               MASSAGE LONDON
             </span>
           </a>
@@ -74,11 +66,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-xs tracking-widest uppercase transition-colors duration-200 ${
-                  isScrolled
-                    ? 'text-text-dark/80 hover:text-deep-blue'
-                    : 'text-off-white/80 hover:text-warm-beige'
-                }`}
+                className="text-xs tracking-widest uppercase text-gray-warm hover:text-gold-main transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -91,11 +79,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => openWhatsapp(whatsappMessages.general)}
-              className={`text-xs tracking-wider uppercase px-4 py-2.5 transition-colors duration-200 border ${
-                isScrolled
-                  ? 'border-deep-blue text-deep-blue hover:bg-deep-blue hover:text-off-white'
-                  : 'border-warm-beige/80 text-warm-beige hover:bg-warm-beige hover:text-deep-blue'
-              }`}
+              className="text-xs tracking-wider uppercase px-4 py-2.5 transition-colors duration-200 border border-gold-main/80 text-gold-main hover:bg-gold-main hover:text-dark-deep font-medium"
             >
               {t.nav.cta}
             </button>
@@ -110,9 +94,7 @@ export function Header() {
               onClick={() => setIsMobileMenuOpen(true)}
               aria-label="Open navigation menu"
               aria-expanded={isMobileMenuOpen}
-              className={`p-2 transition-colors duration-200 ${
-                isScrolled ? 'text-deep-blue' : 'text-off-white'
-              }`}
+              className="p-2 text-cream-text hover:text-gold-main transition-colors duration-200"
             >
               <svg
                 className="w-6 h-6"
@@ -144,4 +126,3 @@ export function Header() {
 }
 
 export default Header;
-

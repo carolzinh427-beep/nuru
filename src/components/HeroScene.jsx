@@ -12,11 +12,11 @@ export function HeroScene({ scrollProgress = 0, mouse = { x: 0, y: 0 }, isMobile
     if (!prefersReducedMotion) {
       // Continuous slow subtle rotation
       meshRef.current.rotation.y += delta * 0.12;
-      meshRef.current.rotation.x += delta * 0.06;
+      meshRef.current.rotation.x += delta * 0.05;
 
       // Mouse reaction (smooth lerp)
-      const targetMouseX = mouse.x * 0.4;
-      const targetMouseY = mouse.y * 0.4;
+      const targetMouseX = mouse.x * 0.35;
+      const targetMouseY = mouse.y * 0.35;
       meshRef.current.position.x = THREE.MathUtils.lerp(
         meshRef.current.position.x,
         targetMouseX,
@@ -24,7 +24,7 @@ export function HeroScene({ scrollProgress = 0, mouse = { x: 0, y: 0 }, isMobile
       );
       meshRef.current.position.y = THREE.MathUtils.lerp(
         meshRef.current.position.y,
-        targetMouseY + (scrollProgress * 0.8), // Scroll reaction: displacement upwards
+        targetMouseY + (scrollProgress * 0.75), // Scroll reaction: displacement upwards
         0.05
       );
 
@@ -42,23 +42,23 @@ export function HeroScene({ scrollProgress = 0, mouse = { x: 0, y: 0 }, isMobile
   });
 
   const detail = isMobile ? 2 : 4;
-  const radius = isMobile ? 1.4 : 1.9;
+  const radius = isMobile ? 1.4 : 1.85;
 
   return (
     <>
-      <ambientLight intensity={0.9} color="#F7F5F0" />
-      <directionalLight position={[5, 6, 5]} intensity={1.4} color="#F7F5F0" />
-      <directionalLight position={[-5, -4, -3]} intensity={0.6} color="#486581" />
-      <pointLight position={[0, -2, 2]} intensity={0.4} color="#C7B79A" />
+      <ambientLight intensity={0.4} color="#161412" />
+      <directionalLight position={[6, 6, 5]} intensity={1.6} color="#E8C878" />
+      <directionalLight position={[-6, -5, -4]} intensity={0.6} color="#C9A24B" />
+      <pointLight position={[0, 0, 3]} intensity={0.8} color="#C9A24B" />
 
       <mesh ref={meshRef} position={[0, 0, 0]}>
         <icosahedronGeometry args={[radius, detail]} />
         <MeshDistortMaterial
-          color="#C7B79A"
-          roughness={0.72}
-          metalness={0.12}
-          distort={prefersReducedMotion ? 0.05 : 0.32}
-          speed={prefersReducedMotion ? 0 : 1.1}
+          color="#C9A24B"
+          roughness={0.42}
+          metalness={0.75}
+          distort={prefersReducedMotion ? 0.04 : 0.3}
+          speed={prefersReducedMotion ? 0 : 1.0}
           wireframe={false}
         />
       </mesh>
@@ -67,4 +67,3 @@ export function HeroScene({ scrollProgress = 0, mouse = { x: 0, y: 0 }, isMobile
 }
 
 export default HeroScene;
-

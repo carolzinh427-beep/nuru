@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 export function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-off-white text-text-dark font-sans flex flex-col selection:bg-warm-beige selection:text-deep-blue">
+      <div className="min-h-screen bg-dark-deep text-cream-text font-sans flex flex-col selection:bg-gold-main selection:text-dark-deep">
         <ScrollProgress />
         <Header />
 
@@ -35,4 +35,3 @@ export function App() {
 }
 
 export default App;
-

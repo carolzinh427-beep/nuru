@@ -5,8 +5,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #F7F5F0;
-    color: #243B53;
+    background-color: #0A0A0A;
+    color: #F2EDE4;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -22,8 +22,8 @@
   }
 
   body {
-    background-color: #F7F5F0;
-    color: #243B53;
+    background-color: #0A0A0A;
+    color: #F2EDE4;
     font-family: 'Inter', system-ui, sans-serif;
     margin: 0;
     padding: 0;
@@ -33,7 +33,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    color: #102A43;
+    color: #F2EDE4;
     font-weight: 500;
     letter-spacing: -0.01em;
   }
@@ -43,7 +43,7 @@
   input:focus-visible,
   select:focus-visible,
   textarea:focus-visible {
-    outline: 2px solid #486581;
+    outline: 2px solid #C9A24B;
     outline-offset: 3px;
   }
 }
@@ -53,23 +53,24 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #102A43;
-    color: #F7F5F0;
-    border: 1px solid #102A43;
-    padding: 0.875rem 2rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
+    background-color: #C9A24B;
+    color: #0A0A0A;
+    border: 1px solid #C9A24B;
+    padding: 0.875rem 2.25rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     cursor: pointer;
     border-radius: 0;
   }
 
   .btn-primary:hover {
-    background-color: #F7F5F0;
-    color: #102A43;
-    border-color: #102A43;
+    background-color: #E8C878;
+    color: #0A0A0A;
+    border-color: #E8C878;
+    box-shadow: 0 0 20px rgba(201, 162, 75, 0.15);
   }
 
   .btn-secondary {
@@ -77,12 +78,12 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    color: #102A43;
-    border: 1px solid #102A43;
-    padding: 0.875rem 2rem;
-    font-size: 0.875rem;
+    color: #F2EDE4;
+    border: 1px solid #2B2722;
+    padding: 0.875rem 2.25rem;
+    font-size: 0.8125rem;
     font-weight: 500;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
     cursor: pointer;
@@ -90,70 +91,31 @@
   }
 
   .btn-secondary:hover {
-    background-color: #102A43;
-    color: #F7F5F0;
-    border-color: #102A43;
-  }
-
-  /* Variant for dark hero section */
-  .btn-hero-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #C7B79A;
-    color: #102A43;
-    border: 1px solid #C7B79A;
-    padding: 0.875rem 2rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-    cursor: pointer;
-    border-radius: 0;
-  }
-
-  .btn-hero-primary:hover {
-    background-color: transparent;
-    color: #F7F5F0;
-    border-color: #F7F5F0;
-  }
-
-  .btn-hero-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    color: #F7F5F0;
-    border: 1px solid #D8D1C5;
-    padding: 0.875rem 2rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-    cursor: pointer;
-    border-radius: 0;
-  }
-
-  .btn-hero-secondary:hover {
-    background-color: #F7F5F0;
-    color: #102A43;
-    border-color: #F7F5F0;
+    background-color: #161412;
+    color: #C9A24B;
+    border-color: #C9A24B;
   }
 
   .eyebrow {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     line-height: 1rem;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #486581;
+    color: #C9A24B;
     font-weight: 600;
   }
 
   .fine-line {
     height: 1px;
-    background-color: #D8D1C5;
+    background-color: #2B2722;
+    width: 100%;
+    border: none;
+    margin: 0;
+  }
+
+  .gold-line {
+    height: 1px;
+    background-color: #C9A24B;
     width: 100%;
     border: none;
     margin: 0;
@@ -181,4 +143,3 @@
     }
   }
 }
-

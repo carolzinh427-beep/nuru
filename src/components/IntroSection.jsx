@@ -20,7 +20,7 @@ export function IntroSection() {
     if (prefersReducedMotion) return;
 
     const ctx = gsap.context(() => {
-      // Expanding decorative line
+      // Expanding gold decorative line
       if (lineRef.current) {
         gsap.fromTo(
           lineRef.current,
@@ -81,35 +81,35 @@ export function IntroSection() {
     <section
       id="intro"
       ref={sectionRef}
-      className="py-24 sm:py-32 bg-off-white text-text-dark border-b border-line-soft"
+      className="py-24 sm:py-32 bg-dark-deep text-cream-text border-b border-border-subtle"
     >
       <div className="container-max">
         {/* Expanding decorative top line */}
-        <div ref={lineRef} className="fine-line mb-16 origin-left" />
+        <div ref={lineRef} className="gold-line mb-16 origin-left" />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Text Column */}
           <div ref={textColRef} className="lg:col-span-7 flex flex-col justify-center">
             <span className="eyebrow mb-4">{t.intro.eyebrow}</span>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-deep-blue font-normal leading-tight mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-8">
               {t.intro.title}
             </h2>
 
-            <p className="text-base sm:text-lg text-text-dark/85 font-light leading-relaxed mb-6">
+            <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-6">
               {t.intro.text}
             </p>
 
-            <p className="text-sm text-slate-blue font-normal italic mb-10">
+            <p className="text-sm text-gray-warm font-normal italic mb-10">
               {t.intro.note}
             </p>
 
             {/* Three indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-line-soft">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-border-subtle">
               {t.intro.indicators.map((indicator, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <span className="w-1.5 h-1.5 bg-warm-beige shrink-0" />
-                  <span className="text-xs uppercase tracking-widest text-text-dark font-medium">
+                  <span className="w-1.5 h-1.5 bg-gold-main shrink-0" />
+                  <span className="text-xs uppercase tracking-widest text-cream-text/90 font-medium">
                     {indicator}
                   </span>
                 </div>
@@ -121,15 +121,15 @@ export function IntroSection() {
           <div className="lg:col-span-5">
             <div
               ref={imageMaskRef}
-              className="relative overflow-hidden bg-line-soft shadow-sm aspect-[4/5] w-full"
+              className="relative overflow-hidden bg-dark-card border border-border-subtle aspect-[4/5] w-full"
             >
               <img
                 src={IMAGES.locationImage}
                 alt="Central London location near Victoria Station"
-                className="w-full h-full object-cover object-center filter saturate-[0.85] contrast-[1.05]"
+                className="w-full h-full object-cover object-center filter saturate-[0.8] contrast-[1.1] brightness-[0.85]"
                 loading="lazy"
               />
-              <div className="absolute inset-0 border border-line-soft/60 pointer-events-none" />
+              <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
             </div>
           </div>
         </div>
@@ -139,4 +139,3 @@ export function IntroSection() {
 }
 
 export default IntroSection;
-

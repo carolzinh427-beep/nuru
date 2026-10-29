@@ -34,11 +34,10 @@ export function ScrollProgress() {
     >
       <div
         ref={barRef}
-        className="w-full h-full bg-deep-blue origin-left scale-x-0"
+        className="w-full h-full bg-gold-main origin-left scale-x-0"
       />
     </div>
   );
 }
 
 export default ScrollProgress;
-
