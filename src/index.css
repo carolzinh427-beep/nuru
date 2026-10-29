@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #F7F5F0;
+    color: #243B53;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    background-color: #F7F5F0;
+    color: #243B53;
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #102A43;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #486581;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #102A43;
+    color: #F7F5F0;
+    border: 1px solid #102A43;
+    padding: 0.875rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+    border-radius: 0;
+  }
+
+  .btn-primary:hover {
+    background-color: #F7F5F0;
+    color: #102A43;
+    border-color: #102A43;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #102A43;
+    border: 1px solid #102A43;
+    padding: 0.875rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+    border-radius: 0;
+  }
+
+  .btn-secondary:hover {
+    background-color: #102A43;
+    color: #F7F5F0;
+    border-color: #102A43;
+  }
+
+  /* Variant for dark hero section */
+  .btn-hero-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C7B79A;
+    color: #102A43;
+    border: 1px solid #C7B79A;
+    padding: 0.875rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+    border-radius: 0;
+  }
+
+  .btn-hero-primary:hover {
+    background-color: transparent;
+    color: #F7F5F0;
+    border-color: #F7F5F0;
+  }
+
+  .btn-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #F7F5F0;
+    border: 1px solid #D8D1C5;
+    padding: 0.875rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+    border-radius: 0;
+  }
+
+  .btn-hero-secondary:hover {
+    background-color: #F7F5F0;
+    color: #102A43;
+    border-color: #F7F5F0;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #486581;
+    font-weight: 600;
+  }
+
+  .fine-line {
+    height: 1px;
+    background-color: #D8D1C5;
+    width: 100%;
+    border: none;
+    margin: 0;
+  }
+
+  .container-max {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-max {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-max {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+}
+
