@@ -159,7 +159,7 @@ export function Hero3D() {
       {/* Bottom bar with Animated Scroll Indicator: Centered, safe gutters */}
       <div
         ref={bottomBarRef}
-        className="relative z-20 container-max pb-8 pt-6 border-t border-border-subtle flex items-center justify-center text-xs text-gray-warm tracking-wider text-center"
+        className="relative z-20 container-max pb-6 pt-4 flex items-center justify-center text-xs text-gray-warm tracking-wider text-center"
       >
         {/* Clickable Luxury Scroll Indicator */}
         <button

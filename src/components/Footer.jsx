@@ -7,7 +7,7 @@ export function Footer() {
   const { t, language, company, whatsappMessages } = useLanguage();
 
   return (
-    <footer className="bg-dark-deep text-cream-text py-8 sm:py-10 border-t border-border-subtle">
+    <footer className="bg-dark-deep text-cream-text py-8 sm:py-10 relative">
       <div className="container-max flex flex-col items-center text-center px-4">
         {/* Row 1: Logo & Horários */}
         <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-4xl pb-6 border-b border-border-subtle/80 gap-4 sm:gap-6">

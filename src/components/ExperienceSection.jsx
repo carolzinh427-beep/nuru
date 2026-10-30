@@ -60,7 +60,7 @@ export function ExperienceSection() {
     <section
       id="experience"
       ref={sectionRef}
-      className="py-24 sm:py-32 bg-dark-deep text-cream-text border-b border-border-subtle overflow-hidden"
+      className="py-20 sm:py-28 bg-dark-deep text-cream-text overflow-hidden relative"
     >
       <div className="container-max">
         {/* Header: Centered */}

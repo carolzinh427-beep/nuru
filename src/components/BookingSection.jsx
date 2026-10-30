@@ -109,7 +109,7 @@ export function BookingSection() {
     <section
       id="booking"
       ref={sectionRef}
-      className="py-24 sm:py-32 bg-dark-deep text-cream-text border-b border-border-subtle relative"
+      className="py-20 sm:py-28 bg-dark-deep text-cream-text relative"
     >
       <div className="container-max">
         <div className="max-w-2xl mx-auto flex flex-col items-center text-center px-4">

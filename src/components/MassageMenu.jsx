@@ -64,7 +64,7 @@ export function MassageMenu() {
     <section
       id="menu"
       ref={sectionRef}
-      className="py-24 sm:py-32 bg-dark-deep text-cream-text border-b border-border-subtle"
+      className="py-20 sm:py-28 bg-dark-deep text-cream-text relative"
     >
       <div className="container-max">
         {/* Header: Centered */}
