@@ -39,8 +39,13 @@ export function MassageMenu() {
                   <img
                     src={service.image}
                     alt={serviceName}
-                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 filter saturate-[0.8] contrast-[1.1] brightness-[0.85]"
+                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 filter saturate-[0.9] contrast-[1.05] brightness-[0.9]"
                     loading="lazy"
+                  />
+                  {/* Sensual subtle border shading */}
+                  <div
+                    className="absolute inset-0 pointer-events-none shadow-[inset_0_0_35px_10px_#0A0A0A]"
+                    aria-hidden="true"
                   />
                   <div className="absolute inset-0 border-b border-border-subtle pointer-events-none" />
                 </div>

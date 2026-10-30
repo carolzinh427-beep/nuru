@@ -15,7 +15,7 @@ export const COMPANY = {
 
 export const IMAGES = {
   heroImage: "/images/hero-placeholder.jpg",
-  therapistImage: "/images/therapist-placeholder.jpg",
+  therapistImage: "/images/thaissa.jpg",
   locationImage: "/images/venue-shower.jpg",
   treatmentRoomImage: "/images/venue-suite.jpg",
   detailImage: "/images/detail-placeholder.jpg"
@@ -23,16 +23,16 @@ export const IMAGES = {
 
 export const WHATSAPP_MESSAGES = {
   en: {
-    general: "Hello, I would like to enquire about massage availability, prices and further information",
-    availability: "Hello, could you please tell me about your current availability",
-    service1: "Hello, I would like more information about the Mix Body-to-Body Massage",
-    service2: "Hello, I would like more information about the Nuru Massage"
+    general: "Hello Thaissa, I would like to enquire about massage availability, prices and further information",
+    availability: "Hello Thaissa, could you please tell me about your current availability",
+    service1: "Hello Thaissa, I would like more information about the Mix Body-to-Body Massage",
+    service2: "Hello Thaissa, I would like more information about the Nuru Massage"
   },
   pt: {
-    general: "Olá, gostaria de saber mais sobre disponibilidade, preços e informações sobre as massagens",
-    availability: "Olá, poderia me informar sobre a disponibilidade atual",
-    service1: "Olá, gostaria de mais informações sobre a Massagem Mix Body-to-Body",
-    service2: "Olá, gostaria de mais informações sobre a Massagem Nuru"
+    general: "Olá Thaissa, gostaria de saber mais sobre disponibilidade, preços e informações sobre as massagens",
+    availability: "Olá Thaissa, poderia me informar sobre a disponibilidade atual",
+    service1: "Olá Thaissa, gostaria de mais informações sobre a Massagem Mix Body-to-Body",
+    service2: "Olá Thaissa, gostaria de mais informações sobre a Massagem Nuru"
   }
 };
 
@@ -119,11 +119,11 @@ export const CONTENT = {
       ]
     },
     about: {
-      eyebrow: "About the Sanctuary",
-      title: "A private moment to slow down",
-      text: "Whether you seek deep release or an enveloping, immersive massage experience, each ritual unfolds in a calm, discreet sanctuary in Central London",
-      note: "Please get in touch directly via WhatsApp for prices, availability and further information",
-      cta: "Get in touch"
+      eyebrow: "Your Host and Masseuse",
+      title: "Sensual Elegance with Thaissa",
+      text: "Welcoming you into an intimate, gold-lit sanctuary in Central London, Thaissa offers a deeply sensual and enveloping massage experience where warm oils, gentle presence and exquisite touch awaken every sense in total discretion",
+      note: "Exclusive and dedicated attention for every private session",
+      cta: "Meet Thaissa via WhatsApp"
     },
     location: {
       eyebrow: "Location",
@@ -208,11 +208,11 @@ export const CONTENT = {
       ]
     },
     about: {
-      eyebrow: "Sobre o Santuário",
-      title: "Um momento privado para desacelerar",
-      text: "Seja para relaxar profundamente ou desfrutar de uma experiência de massagem mais envolvente, cada sessão acontece em um ambiente calmo, limpo e discreto no centro de Londres",
-      note: "Entre em contato diretamente pelo WhatsApp para preços, disponibilidade e mais informações",
-      cta: "Entre em contato"
+      eyebrow: "Sua Anfitriã e Terapeuta",
+      title: "Elegância Sensual com Thaissa",
+      text: "Recebendo você em um santuário íntimo e iluminado a ouro no centro de Londres, Thaissa proporciona uma experiência de massagem profundamente envolvente e sensual, onde óleos aquecidos, presença cativante e toque delicado despertam todos os sentidos com absoluta discrição",
+      note: "Atendimento exclusivo e dedicado para cada sessão privativa",
+      cta: "Falar com Thaissa pelo WhatsApp"
     },
     location: {
       eyebrow: "Localização",

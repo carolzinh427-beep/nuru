@@ -14,16 +14,43 @@ export function AboutSection() {
       <div className="container-max">
         {/* 2-Column Layout: Image on one side, text on the other */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Image with safe margins, not touching screen edges */}
+          {/* Left Column: Image with sensual vignette shading, safe margins */}
           <div className="lg:col-span-5 order-2 lg:order-1 px-2 sm:px-4">
-            <div className="relative aspect-[4/5] w-full max-w-md mx-auto overflow-hidden bg-dark-card border border-border-subtle shadow-2xl">
+            <div className="relative aspect-[4/5] w-full max-w-md mx-auto overflow-hidden bg-dark-card border border-gold-main/30 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)] group">
               <img
                 src={IMAGES.therapistImage}
-                alt="Massage environment and attention to detail"
-                className="w-full h-full object-cover object-center filter saturate-[0.8] contrast-[1.1] brightness-[0.8]"
+                alt="Thaissa | Private and sensual massage in Central London"
+                className="w-full h-full object-cover object-center filter saturate-[1.02] contrast-[1.04] brightness-[0.96] transition-transform duration-700 ease-out group-hover:scale-105"
                 loading="lazy"
               />
-              <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
+
+              {/* Sensual Vignette Shading on borders */}
+              <div
+                className="absolute inset-0 pointer-events-none shadow-[inset_0_0_55px_15px_#0A0A0A,inset_0_0_110px_35px_rgba(10,10,10,0.7)]"
+                aria-hidden="true"
+              />
+
+              {/* Bottom shadow lift for name plate */}
+              <div
+                className="absolute inset-x-0 bottom-0 h-28 pointer-events-none shadow-[inset_0_-80px_60px_-15px_#0A0A0A]"
+                aria-hidden="true"
+              />
+
+              {/* Sensual Name Tag in the bottom corner */}
+              <div className="absolute bottom-5 left-5 right-5 z-10 flex items-center justify-between pointer-events-none">
+                <div>
+                  <span className="text-[10px] tracking-widest uppercase text-gold-main font-semibold block">
+                    Private Sanctuary
+                  </span>
+                  <span className="font-serif text-2xl text-cream-text tracking-wide block">
+                    Thaissa
+                  </span>
+                </div>
+                <div className="w-2 h-2 rounded-full bg-gold-main shadow-[0_0_10px_rgba(194,142,66,0.8)]" />
+              </div>
+
+              {/* Delicate Gold Border Accent */}
+              <div className="absolute inset-0 border border-gold-main/25 pointer-events-none" />
             </div>
           </div>
 

@@ -122,13 +122,18 @@ export function IntroSection() {
           <div className="lg:col-span-5 px-2 sm:px-4">
             <div
               ref={imageMaskRef}
-              className="relative overflow-hidden bg-dark-card border border-border-subtle aspect-[4/5] w-full max-w-md mx-auto shadow-2xl"
+              className="relative overflow-hidden bg-dark-card border border-gold-main/30 aspect-[4/5] w-full max-w-md mx-auto shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)] group"
             >
               <img
                 src={IMAGES.locationImage}
                 alt="Intimate candlelit sanctuary in Central London near Victoria Station"
-                className="w-full h-full object-cover object-center filter saturate-[0.92] contrast-[1.05] brightness-[0.95]"
+                className="w-full h-full object-cover object-center filter saturate-[0.92] contrast-[1.05] brightness-[0.95] transition-transform duration-700 ease-out group-hover:scale-105"
                 loading="lazy"
+              />
+              {/* Sensual Vignette Shading on borders */}
+              <div
+                className="absolute inset-0 pointer-events-none shadow-[inset_0_0_55px_15px_#0A0A0A,inset_0_0_110px_35px_rgba(10,10,10,0.7)]"
+                aria-hidden="true"
               />
               <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
             </div>

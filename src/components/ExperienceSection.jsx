@@ -98,13 +98,18 @@ export function ExperienceSection() {
 
         {/* Treatment Room Image: Centered with safe margins, NOT touching viewport edges */}
         <div className="max-w-4xl mx-auto px-4">
-          <div className="relative aspect-[16/9] min-h-[260px] sm:min-h-[340px] overflow-hidden bg-dark-card border border-border-subtle shadow-xl">
+          <div className="relative aspect-[16/9] min-h-[260px] sm:min-h-[340px] overflow-hidden bg-dark-card border border-gold-main/30 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)]">
             <img
               ref={parallaxImgRef}
               src={IMAGES.treatmentRoomImage}
               alt="Private candlelit massage suite with luxurious linens and warm oils"
               className="w-full h-[120%] object-cover object-center -mt-[10%] filter saturate-[0.95] contrast-[1.05] brightness-[0.92]"
               loading="lazy"
+            />
+            {/* Sensual Vignette Shading on borders */}
+            <div
+              className="absolute inset-0 pointer-events-none shadow-[inset_0_0_65px_20px_#0A0A0A,inset_0_0_130px_45px_rgba(10,10,10,0.75)]"
+              aria-hidden="true"
             />
             <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
           </div>
