@@ -138,13 +138,13 @@ export function BookingSection() {
     // Compose personalized WhatsApp message
     let message = '';
     if (language === 'pt') {
-      message = `Olá Thaissa, gostaria de solicitar um agendamento:\n\n• Nome: ${formData.name.trim()}\n• Data: ${formData.date || 'A combinar'}\n• Horário: ${formData.time}\n• Serviço: ${serviceLabel}`;
+      message = `Olá, gostaria de solicitar um agendamento:\n\n• Nome: ${formData.name.trim()}\n• Data: ${formData.date || 'A combinar'}\n• Horário: ${formData.time}\n• Serviço: ${serviceLabel}`;
       if (formData.note.trim()) {
         message += `\n• Mensagem: ${formData.note.trim()}`;
       }
       message += '\n\nPoderia confirmar a disponibilidade por favor?';
     } else {
-      message = `Hello Thaissa, I would like to request an appointment:\n\n• Name: ${formData.name.trim()}\n• Date: ${formData.date || 'Flexible'}\n• Time: ${formData.time}\n• Experience: ${serviceLabel}`;
+      message = `Hello, I would like to request an appointment:\n\n• Name: ${formData.name.trim()}\n• Date: ${formData.date || 'Flexible'}\n• Time: ${formData.time}\n• Experience: ${serviceLabel}`;
       if (formData.note.trim()) {
         message += `\n• Message: ${formData.note.trim()}`;
       }
@@ -207,7 +207,7 @@ export function BookingSection() {
                         <path d="M12 16c-1 2-2.5 3.5-4.5 4 2 1 3.5 2.5 4 4.5.5-2 2-3.5 4-4.5-2-.5-3.5-2-4-4z" opacity="0.6"/>
                       </svg>
                       <span className="font-serif tracking-widest text-xs uppercase text-gold-light font-medium">
-                        THAISSA · VIP PASS
+                        NURU LONDON · VIP PASS
                       </span>
                     </div>
                     <span className="font-mono text-[10px] text-gold-main/70 tracking-wider">
@@ -255,7 +255,7 @@ export function BookingSection() {
                       </svg>
                     </div>
                     <span className="font-serif text-sm uppercase tracking-widest text-gold-light font-medium">
-                      Thaissa London
+                      Nuru London
                     </span>
                     <span className="text-[10px] uppercase tracking-wider text-gray-warm mt-0.5">
                       Private Sanctuary
@@ -415,7 +415,7 @@ export function BookingSection() {
                     rows={2}
                     value={formData.note}
                     onChange={handleInputChange}
-                    placeholder={t.booking.notePlaceholder || 'Any special request or question for Thaissa'}
+                    placeholder={t.booking.notePlaceholder || 'Any special request or question for your session'}
                     className="w-full bg-dark-deep/90 border border-border-subtle px-4 py-2 text-sm text-cream-text rounded-xl focus:outline-none focus:border-gold-main focus:ring-1 focus:ring-gold-main transition-colors duration-200 resize-none"
                   />
                 </div>

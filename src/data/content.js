@@ -17,8 +17,8 @@ export const COMPANY = {
 
 export const IMAGES = {
   heroImage: "/images/hero-candlelit-sanctuary.jpg",
-  therapistImage: "/images/thaissa.jpg",
-  therapistEveningImage: "/images/thaissa-evening.png",
+  therapistImage: "/images/therapist.jpg",
+  therapistEveningImage: "/images/therapist-placeholder.jpg",
   locationImage: "/images/venue-shower.jpg",
   treatmentRoomImage: "/images/venue-suite.jpg",
   detailImage: "/images/detail-placeholder.jpg"
@@ -26,16 +26,16 @@ export const IMAGES = {
 
 export const WHATSAPP_MESSAGES = {
   en: {
-    general: "Hello Thaissa, I would like to enquire about massage availability, prices and further information",
-    availability: "Hello Thaissa, could you please tell me about your current availability",
-    service1: "Hello Thaissa, I would like more information about the Mix Body-to-Body Massage",
-    service2: "Hello Thaissa, I would like more information about the Nuru Massage"
+    general: "Hello, I would like to enquire about massage availability, prices and further information",
+    availability: "Hello, could you please tell me about your current availability",
+    service1: "Hello, I would like more information about the Mix Body-to-Body Massage",
+    service2: "Hello, I would like more information about the Nuru Massage"
   },
   pt: {
-    general: "Olá Thaissa, gostaria de saber mais sobre disponibilidade, preços e informações sobre as massagens",
-    availability: "Olá Thaissa, poderia me informar sobre a disponibilidade atual",
-    service1: "Olá Thaissa, gostaria de mais informações sobre a Massagem Mix Body-to-Body",
-    service2: "Olá Thaissa, gostaria de mais informações sobre a Massagem Nuru"
+    general: "Olá, gostaria de saber mais sobre disponibilidade, preços e informações sobre as massagens",
+    availability: "Olá, poderia me informar sobre a disponibilidade atual",
+    service1: "Olá, gostaria de mais informações sobre a Massagem Mix Body-to-Body",
+    service2: "Olá, gostaria de mais informações sobre a Massagem Nuru"
   }
 };
 
@@ -124,8 +124,8 @@ export const CONTENT = {
     },
     about: {
       eyebrow: "",
-      title: "Sensual Elegance with Thaissa",
-      text: "Welcoming you into an intimate, gold-lit sanctuary in Central London, Thaissa offers a deeply sensual and enveloping massage experience where warm oils, gentle presence and exquisite touch awaken every sense in total discretion",
+      title: "Sensual Elegance in London",
+      text: "Welcoming you into an intimate, gold-lit sanctuary in Central London, we offer a deeply sensual and enveloping massage experience where warm oils, gentle presence and exquisite touch awaken every sense in total discretion",
       note: "Exclusive and dedicated attention for every private session",
       cta: ""
     },
@@ -191,9 +191,9 @@ export const CONTENT = {
         { id: "query", label: "General Enquiry or Question" }
       ],
       noteLabel: "Preferences or Notes (Optional)",
-      notePlaceholder: "Any special request or question for Thaissa",
+      notePlaceholder: "Any special request or question for your session",
       submitButton: "Request Booking",
-      whatsappLead: "Hello Thaissa, I would like to book an appointment"
+      whatsappLead: "Hello, I would like to book an appointment"
     },
     location: {
       eyebrow: "Location",
@@ -285,8 +285,8 @@ export const CONTENT = {
     },
     about: {
       eyebrow: "",
-      title: "Elegância Sensual com Thaissa",
-      text: "Recebendo você em um santuário íntimo e iluminado a ouro no centro de Londres, Thaissa proporciona uma experiência de massagem profundamente envolvente e sensual, onde óleos aquecidos, presença cativante e toque delicado despertam todos os sentidos com absoluta discrição",
+      title: "Elegância Sensual em Londres",
+      text: "Recebendo você em um santuário íntimo e iluminado a ouro no centro de Londres, proporcionamos uma experiência de massagem profundamente envolvente e sensual, onde óleos aquecidos, presença cativante e toque delicado despertam todos os sentidos com absoluta discrição",
       note: "Atendimento exclusivo e dedicado para cada sessão privativa",
       cta: ""
     },
@@ -352,9 +352,9 @@ export const CONTENT = {
         { id: "query", label: "Dúvida ou Informações Gerais" }
       ],
       noteLabel: "Preferências ou Observações (Opcional)",
-      notePlaceholder: "Alguma dúvida ou preferência para Thaissa",
+      notePlaceholder: "Alguma dúvida ou preferência para o seu atendimento",
       submitButton: "Request Booking",
-      whatsappLead: "Olá Thaissa, gostaria de agendar um horário"
+      whatsappLead: "Olá, gostaria de agendar um horário"
     },
     location: {
       eyebrow: "Localização",

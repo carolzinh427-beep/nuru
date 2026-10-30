@@ -68,7 +68,7 @@ export function AboutSection() {
       <div className="container-max">
         {/* 2-Column Layout: Portrait on one side, text on the other */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Portrait of Thaissa */}
+          {/* Left Column: Sanctuary Portrait */}
           <div
             ref={photosRef}
             className="lg:col-span-5 order-2 lg:order-1 px-2 sm:px-4 flex justify-center"
@@ -76,7 +76,7 @@ export function AboutSection() {
             <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden bg-dark-card border border-gold-main/30 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)] group rounded-2xl sm:rounded-3xl">
               <img
                 src={IMAGES.therapistImage}
-                alt="Thaissa | Sensual Elegance in Central London"
+                alt="Sensual Elegance in Central London"
                 className="w-full h-full object-cover object-center filter saturate-[1.02] contrast-[1.04] brightness-[0.96] transition-transform duration-700 ease-out group-hover:scale-105"
                 loading="lazy"
               />

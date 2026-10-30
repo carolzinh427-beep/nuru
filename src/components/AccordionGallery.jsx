@@ -6,8 +6,8 @@ import { gsap } from 'gsap';
 import './AccordionGallery.css';
 
 const DEFAULT_ITEMS = [
-  { image: '/images/thaissa.jpg', label: 'Thaissa | Studio Portrait', link: '#' },
-  { image: '/images/thaissa-evening.png', label: 'Thaissa | Sensual Elegance', link: '#' }
+  { image: '/images/therapist.jpg', label: 'Studio Portrait', link: '#' },
+  { image: '/images/therapist-placeholder.jpg', label: 'Sensual Elegance', link: '#' }
 ];
 
 export const AccordionGallery = ({
