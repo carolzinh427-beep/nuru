@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../context/LanguageContext';
 import { COMPANY } from '../data/content';
 import { useReducedMotion } from '../hooks/useReducedMotion';
+import StarBorder from './StarBorder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,27 +111,47 @@ export function LocationSection() {
 
             {/* CTAs: Google Maps + Avalie no Google */}
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <a
+              <StarBorder
+                as="a"
                 href={COMPANY.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary w-full sm:w-auto text-center rounded-full"
+                color="#F5EFE6"
+                trailColor="#D9A75E"
+                backgroundColor="#C28E42"
+                textColor="#0A0A0A"
+                borderColor="rgba(194, 142, 66, 0.6)"
+                radius={9999}
+                thickness={1.5}
+                glow={0.7}
+                sparkle={true}
+                className="w-full sm:w-auto uppercase tracking-widest text-xs font-semibold py-3.5 px-8 text-center shadow-[0_4px_20px_rgba(194,142,66,0.25)] hover:scale-[1.02] active:scale-95 transition-transform"
               >
                 {t.location.cta}
-              </a>
+              </StarBorder>
 
-              <a
+              <StarBorder
+                as="a"
                 href={COMPANY.googleReviewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center space-x-2 text-center rounded-full"
+                color="#D9A75E"
+                trailColor="#C28E42"
+                backgroundColor="rgba(10, 10, 10, 0.6)"
+                textColor="#F5EFE6"
+                borderColor="rgba(194, 142, 66, 0.45)"
+                radius={9999}
+                thickness={1.5}
+                glow={0.6}
+                sparkle={true}
+                className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 text-center uppercase tracking-widest text-xs font-medium py-3.5 px-8 hover:bg-gold-main/10 hover:scale-[1.02] active:scale-95 transition-transform"
               >
                 {/* 5-star rating icon */}
                 <svg className="w-4 h-4 text-gold-main shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
                 <span>{t.location.reviewCta}</span>
-              </a>
+              </StarBorder>
             </div>
           </div>
 

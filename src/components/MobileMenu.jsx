@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { openWhatsapp } from '../utils/whatsapp';
 import LanguageSwitcher from './LanguageSwitcher';
+import StarBorder from './StarBorder';
 
 /**
  * MobileMenu
@@ -210,13 +211,23 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
               </svg>
             </a>
 
-            <button
+            <StarBorder
+              as="button"
               type="button"
               onClick={handleWhatsappClick}
-              className="btn-primary flex-1 text-center rounded-full text-xs py-3"
+              color="#F5EFE6"
+              trailColor="#D9A75E"
+              backgroundColor="#C28E42"
+              textColor="#0A0A0A"
+              borderColor="rgba(194, 142, 66, 0.6)"
+              radius={9999}
+              thickness={1.5}
+              glow={0.7}
+              sparkle={true}
+              className="flex-1 text-center !rounded-full uppercase tracking-widest text-xs font-semibold py-3 px-6 shadow-[0_4px_20px_rgba(194,142,66,0.25)] hover:scale-[1.02] active:scale-95 transition-transform"
             >
               {t.nav.cta}
-            </button>
+            </StarBorder>
           </div>
         </div>
       </div>

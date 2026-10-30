@@ -6,6 +6,7 @@ import { useReducedMotion } from '../hooks/useReducedMotion';
 import { IMAGES } from '../data/content';
 import { openWhatsapp } from '../utils/whatsapp';
 import { HeroLigatureTitle } from './HeroLigatureTitle';
+import StarBorder from './StarBorder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,20 +107,40 @@ export function Hero3D() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center w-full max-w-md mx-auto">
-            <button
+            <StarBorder
+              as="button"
               type="button"
               onClick={() => openWhatsapp(whatsappMessages.general)}
-              className="btn-primary w-full sm:w-auto rounded-full"
+              color="#F5EFE6"
+              trailColor="#D9A75E"
+              backgroundColor="#C28E42"
+              textColor="#0A0A0A"
+              borderColor="rgba(194, 142, 66, 0.6)"
+              radius={9999}
+              thickness={1.5}
+              glow={0.7}
+              sparkle={true}
+              className="w-full sm:w-auto uppercase tracking-widest text-xs font-semibold py-3.5 px-8 shadow-[0_4px_25px_rgba(194,142,66,0.3)] hover:scale-[1.02] active:scale-95 transition-transform"
             >
               {t.hero.ctaPrimary}
-            </button>
-            <button
+            </StarBorder>
+            <StarBorder
+              as="button"
               type="button"
               onClick={scrollToMenu}
-              className="btn-secondary w-full sm:w-auto rounded-full"
+              color="#D9A75E"
+              trailColor="#C28E42"
+              backgroundColor="rgba(10, 10, 10, 0.6)"
+              textColor="#F5EFE6"
+              borderColor="rgba(194, 142, 66, 0.45)"
+              radius={9999}
+              thickness={1.5}
+              glow={0.6}
+              sparkle={true}
+              className="w-full sm:w-auto uppercase tracking-widest text-xs font-medium py-3.5 px-8 hover:bg-gold-main/10 hover:scale-[1.02] active:scale-95 transition-transform"
             >
               {t.hero.ctaSecondary}
-            </button>
+            </StarBorder>
           </div>
         </div>
       </div>

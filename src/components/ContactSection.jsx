@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../context/LanguageContext';
 import { openWhatsapp } from '../utils/whatsapp';
 import { useReducedMotion } from '../hooks/useReducedMotion';
+import StarBorder from './StarBorder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,13 +62,23 @@ export function ContactSection() {
 
           {/* Single CTA Button: Ask about availability */}
           <div className="flex justify-center items-center w-full max-w-xs mx-auto">
-            <button
+            <StarBorder
+              as="button"
               type="button"
               onClick={() => openWhatsapp(whatsappMessages.availability)}
-              className="btn-primary w-full inline-flex items-center justify-center text-center rounded-full"
+              color="#F5EFE6"
+              trailColor="#D9A75E"
+              backgroundColor="#C28E42"
+              textColor="#0A0A0A"
+              borderColor="rgba(194, 142, 66, 0.6)"
+              radius={9999}
+              thickness={1.5}
+              glow={0.7}
+              sparkle={true}
+              className="w-full inline-flex items-center justify-center text-center !rounded-full uppercase tracking-widest text-xs font-semibold py-3.5 px-8 shadow-[0_4px_20px_rgba(194,142,66,0.25)] hover:scale-[1.02] active:scale-95 transition-transform"
             >
               <span>{t.contact.ctaSecondary}</span>
-            </button>
+            </StarBorder>
           </div>
         </div>
       </div>

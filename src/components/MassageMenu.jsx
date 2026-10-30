@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../context/LanguageContext';
 import { openWhatsapp } from '../utils/whatsapp';
 import { useReducedMotion } from '../hooks/useReducedMotion';
+import StarBorder from './StarBorder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -124,13 +125,23 @@ export function MassageMenu() {
                       <span className="text-xs uppercase tracking-wider text-gold-main font-medium text-center">
                         {t.menu.priceNote}
                       </span>
-                      <button
+                      <StarBorder
+                        as="button"
                         type="button"
                         onClick={() => openWhatsapp(messageToSend)}
-                        className="btn-primary text-xs py-3 px-8 whitespace-nowrap"
+                        color="#F5EFE6"
+                        trailColor="#D9A75E"
+                        backgroundColor="#C28E42"
+                        textColor="#0A0A0A"
+                        borderColor="rgba(194, 142, 66, 0.6)"
+                        radius={9999}
+                        thickness={1.5}
+                        glow={0.7}
+                        sparkle={true}
+                        className="text-xs py-3 px-8 whitespace-nowrap uppercase tracking-widest font-semibold shadow-[0_4px_20px_rgba(194,142,66,0.25)] hover:scale-[1.02] active:scale-95 transition-transform"
                       >
                         {t.menu.ctaButton}
-                      </button>
+                      </StarBorder>
                     </div>
                   </div>
                 </div>
