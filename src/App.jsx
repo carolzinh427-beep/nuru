@@ -12,6 +12,7 @@ import LocationSection from './components/LocationSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import OrganicCurveDivider from './components/OrganicCurveDivider';
+import AnimatedContent from './components/AnimatedContent';
 
 export function App() {
   return (
@@ -23,23 +24,53 @@ export function App() {
         <main id="main-content" className="flex-1">
           <Hero3D />
           <OrganicCurveDivider variant="duo" />
-          <IntroSection />
+
+          <AnimatedContent distance={45} duration={0.85} ease="power3.out" threshold={0.12}>
+            <IntroSection />
+          </AnimatedContent>
+
           <OrganicCurveDivider variant="oil" />
-          <MassageMenu />
+
+          <AnimatedContent distance={45} duration={0.85} ease="power3.out" threshold={0.12}>
+            <MassageMenu />
+          </AnimatedContent>
+
           <OrganicCurveDivider variant="silk" />
-          <ExperienceSection />
+
+          <AnimatedContent distance={45} duration={0.85} ease="power3.out" threshold={0.12}>
+            <ExperienceSection />
+          </AnimatedContent>
+
           <OrganicCurveDivider variant="duo" flip={true} />
-          <AboutSection />
+
+          <AnimatedContent distance={45} duration={0.85} ease="power3.out" threshold={0.12}>
+            <AboutSection />
+          </AnimatedContent>
+
           <OrganicCurveDivider variant="oil" flip={true} />
-          <BookingSection />
+
+          <AnimatedContent distance={45} duration={0.85} ease="power3.out" threshold={0.12}>
+            <BookingSection />
+          </AnimatedContent>
+
           <OrganicCurveDivider variant="silk" flip={true} />
-          <LocationSection />
+
+          <AnimatedContent distance={45} duration={0.85} ease="power3.out" threshold={0.12}>
+            <LocationSection />
+          </AnimatedContent>
+
           <OrganicCurveDivider variant="duo" />
-          <ContactSection />
+
+          <AnimatedContent distance={45} duration={0.85} ease="power3.out" threshold={0.12}>
+            <ContactSection />
+          </AnimatedContent>
+
           <OrganicCurveDivider variant="oil" />
         </main>
 
-        <Footer />
+        <AnimatedContent distance={35} duration={0.8} ease="power3.out" threshold={0.1}>
+          <Footer />
+        </AnimatedContent>
       </div>
     </LanguageProvider>
   );
