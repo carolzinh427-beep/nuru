@@ -88,7 +88,7 @@ export function MassageMenu() {
             return (
               <article
                 key={service.id}
-                className="group bg-dark-card border border-border-subtle transition-all duration-300 hover:border-gold-main/60 hover:shadow-[0_4px_30px_rgba(194,142,66,0.14)] flex flex-col justify-between text-center"
+                className="group bg-dark-card border border-border-subtle transition-all duration-300 hover:border-gold-main/60 hover:shadow-[0_4px_30px_rgba(194,142,66,0.14)] flex flex-col justify-between text-center rounded-2xl sm:rounded-3xl overflow-hidden"
               >
                 {/* Image */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-dark-deep">

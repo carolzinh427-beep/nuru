@@ -66,14 +66,14 @@ export function ContactSection() {
             <button
               type="button"
               onClick={() => openWhatsapp(whatsappMessages.availability)}
-              className="btn-primary w-full inline-flex items-center justify-center text-center"
+              className="btn-primary w-full inline-flex items-center justify-center text-center rounded-full"
             >
               <span>{t.contact.ctaSecondary}</span>
             </button>
           </div>
 
-          {/* Operating hours: Centered */}
-          <div className="border-t border-border-subtle pt-8 max-w-sm mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-center">
+          {/* Operating hours: Centered with rounded luxury pill container */}
+          <div className="border border-border-subtle p-4 sm:p-5 rounded-2xl bg-dark-card/40 backdrop-blur-sm max-w-sm mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-center">
             <span className="uppercase tracking-widest text-gray-warm font-semibold">
               {t.contact.hoursLabel}
             </span>

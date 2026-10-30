@@ -46,6 +46,10 @@
     outline: 2px solid #C28E42;
     outline-offset: 3px;
   }
+
+  input, select, textarea {
+    border-radius: 0.875rem;
+  }
 }
 
 @layer components {
@@ -63,7 +67,7 @@
     text-transform: uppercase;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
-    border-radius: 0;
+    border-radius: 9999px;
     box-shadow: 0 2px 20px rgba(194, 142, 66, 0.22);
   }
 
@@ -89,7 +93,7 @@
     text-transform: uppercase;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
-    border-radius: 0;
+    border-radius: 9999px;
   }
 
   .btn-secondary:hover {

@@ -109,7 +109,7 @@ export function IntroSection() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-border-subtle max-w-xl">
               {t.intro.indicators.map((indicator, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <span className="w-1.5 h-1.5 bg-gold-main shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-main shrink-0" />
                   <span className="text-xs uppercase tracking-widest text-cream-text/90 font-medium">
                     {indicator}
                   </span>
@@ -122,7 +122,7 @@ export function IntroSection() {
           <div className="lg:col-span-5 px-2 sm:px-4">
             <div
               ref={imageMaskRef}
-              className="relative overflow-hidden bg-dark-card border border-gold-main/30 aspect-[4/5] w-full max-w-md mx-auto shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)] group"
+              className="relative overflow-hidden bg-dark-card border border-gold-main/30 aspect-[4/5] w-full max-w-md mx-auto shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)] group rounded-2xl sm:rounded-3xl"
             >
               <img
                 src={IMAGES.locationImage}
@@ -135,7 +135,7 @@ export function IntroSection() {
                 className="absolute inset-0 pointer-events-none shadow-[inset_0_0_55px_15px_#0A0A0A,inset_0_0_110px_35px_rgba(10,10,10,0.7)]"
                 aria-hidden="true"
               />
-              <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
+              <div className="absolute inset-0 border border-gold-main/20 pointer-events-none rounded-2xl sm:rounded-3xl" />
             </div>
           </div>
         </div>

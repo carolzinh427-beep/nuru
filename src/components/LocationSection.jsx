@@ -82,7 +82,7 @@ export function LocationSection() {
 
             {/* Indicator blocks */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 max-w-xl">
-              <div className="border border-border-subtle hover:border-gold-main/40 transition-colors duration-300 p-5 bg-dark-card flex flex-col">
+              <div className="border border-border-subtle hover:border-gold-main/40 transition-colors duration-300 p-5 bg-dark-card rounded-2xl flex flex-col">
                 <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold">
                   Area
                 </span>
@@ -91,7 +91,7 @@ export function LocationSection() {
                 </span>
               </div>
 
-              <div className="border border-border-subtle hover:border-gold-main/40 transition-colors duration-300 p-5 bg-dark-card flex flex-col">
+              <div className="border border-border-subtle hover:border-gold-main/40 transition-colors duration-300 p-5 bg-dark-card rounded-2xl flex flex-col">
                 <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold">
                   Access
                 </span>
@@ -100,7 +100,7 @@ export function LocationSection() {
                 </span>
               </div>
 
-              <div className="border border-border-subtle hover:border-gold-main/40 transition-colors duration-300 p-5 bg-dark-card flex flex-col">
+              <div className="border border-border-subtle hover:border-gold-main/40 transition-colors duration-300 p-5 bg-dark-card rounded-2xl flex flex-col">
                 <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold">
                   Hours
                 </span>
@@ -116,7 +116,7 @@ export function LocationSection() {
                 href={COMPANY.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary w-full sm:w-auto text-center"
+                className="btn-primary w-full sm:w-auto text-center rounded-full"
               >
                 {t.location.cta}
               </a>
@@ -125,7 +125,7 @@ export function LocationSection() {
                 href={COMPANY.googleReviewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center space-x-2 text-center"
+                className="btn-secondary w-full sm:w-auto inline-flex items-center justify-center space-x-2 text-center rounded-full"
               >
                 {/* 5-star rating icon */}
                 <svg className="w-4 h-4 text-gold-main shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -138,10 +138,10 @@ export function LocationSection() {
 
           {/* Right Column: Google Maps Integration */}
           <div ref={rightColRef} className="lg:col-span-6 px-2 sm:px-4">
-            <div className="relative aspect-[4/3] w-full max-w-xl mx-auto bg-dark-card border border-gold-main/30 hover:border-gold-main/50 transition-colors duration-300 overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/3] w-full max-w-xl mx-auto bg-dark-card border border-gold-main/30 hover:border-gold-main/50 transition-colors duration-300 overflow-hidden shadow-2xl rounded-2xl sm:rounded-3xl">
               {/* Gold Luxury Map Badge */}
-              <div className="absolute top-4 left-4 z-10 bg-dark-deep/90 backdrop-blur-md border border-gold-main/30 text-gold-main px-3.5 py-1.5 text-[11px] tracking-widest uppercase font-medium shadow-lg pointer-events-none flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 bg-gold-main shrink-0" />
+              <div className="absolute top-4 left-4 z-10 bg-dark-deep/90 backdrop-blur-md border border-gold-main/30 text-gold-main px-3.5 py-1.5 text-[11px] tracking-widest uppercase font-medium shadow-lg pointer-events-none flex items-center space-x-2 rounded-full">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-main shrink-0" />
                 <span>Nuru Massage London</span>
               </div>
 
@@ -156,7 +156,7 @@ export function LocationSection() {
               />
 
               {/* Subtle gold inner border highlight */}
-              <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
+              <div className="absolute inset-0 border border-gold-main/20 pointer-events-none rounded-2xl sm:rounded-3xl" />
             </div>
           </div>
         </div>

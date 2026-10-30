@@ -108,7 +108,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
           type="button"
           onClick={onClose}
           aria-label="Close navigation menu"
-          className="p-2 text-gray-warm hover:text-gold-main focus-visible:outline-gold-main"
+          className="p-2 text-gray-warm hover:text-gold-main focus-visible:outline-gold-main rounded-full"
         >
           <svg
             className="w-7 h-7"
@@ -161,7 +161,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
             href="https://instagram.com/nurumassagelondon"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary px-4 py-3 text-center inline-flex items-center justify-center shrink-0"
+            className="btn-secondary px-4 py-3 text-center inline-flex items-center justify-center shrink-0 rounded-full"
             aria-label="Instagram"
           >
             <svg className="w-4 h-4 text-gold-main" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -171,7 +171,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
           <button
             type="button"
             onClick={handleWhatsappClick}
-            className="btn-primary flex-1 text-center"
+            className="btn-primary flex-1 text-center rounded-full"
           >
             {t.nav.cta}
           </button>

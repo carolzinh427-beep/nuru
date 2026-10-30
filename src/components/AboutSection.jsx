@@ -76,7 +76,7 @@ export function AboutSection() {
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
               {/* Photo 1: Studio portrait */}
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-dark-card border border-gold-main/30 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)] group">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-dark-card border border-gold-main/30 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)] group rounded-2xl sm:rounded-3xl">
                 <img
                   src={IMAGES.therapistImage}
                   alt="Thaissa | Private and sensual massage in Central London"
@@ -96,11 +96,11 @@ export function AboutSection() {
                   aria-hidden="true"
                 />
 
-                <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
+                <div className="absolute inset-0 border border-gold-main/20 pointer-events-none rounded-2xl sm:rounded-3xl" />
               </div>
 
               {/* Photo 2: Evening elegance with wine */}
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-dark-card border border-gold-main/30 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)] group sm:translate-y-4">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-dark-card border border-gold-main/30 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)] group sm:translate-y-4 rounded-2xl sm:rounded-3xl">
                 <img
                   src={IMAGES.therapistEveningImage}
                   alt="Thaissa | Sensual Elegance in Central London"
@@ -120,7 +120,7 @@ export function AboutSection() {
                   aria-hidden="true"
                 />
 
-                <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
+                <div className="absolute inset-0 border border-gold-main/20 pointer-events-none rounded-2xl sm:rounded-3xl" />
               </div>
             </div>
           </div>
@@ -138,7 +138,7 @@ export function AboutSection() {
               {t.about.text}
             </p>
 
-            <div className="border-t border-b border-gold-main/30 py-5 my-8 max-w-lg w-full">
+            <div className="border border-gold-main/30 rounded-2xl p-5 my-8 max-w-lg w-full bg-dark-card/40 backdrop-blur-sm">
               <p className="text-sm sm:text-base text-gold-light/90 font-normal italic">
                 {t.about.note}
               </p>

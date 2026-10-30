@@ -79,7 +79,7 @@ export function ExperienceSection() {
           {t.experience.pillars.map((pillar) => (
             <div
               key={pillar.number}
-              className="border-t border-border-subtle hover:border-gold-main/40 transition-colors duration-300 pt-8 flex flex-col items-center text-center"
+              className="border border-border-subtle/60 hover:border-gold-main/40 transition-colors duration-300 p-6 sm:p-8 bg-dark-card/40 rounded-2xl flex flex-col items-center text-center backdrop-blur-sm"
             >
               <div className="flex flex-col items-center">
                 <span className="font-serif text-5xl sm:text-6xl text-gold-main block mb-4 font-normal text-center tracking-tight">
@@ -98,7 +98,7 @@ export function ExperienceSection() {
 
         {/* Treatment Room Image: Centered with safe margins, NOT touching viewport edges */}
         <div className="max-w-4xl mx-auto px-4">
-          <div className="relative aspect-[16/9] min-h-[260px] sm:min-h-[340px] overflow-hidden bg-dark-card border border-gold-main/30 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)]">
+          <div className="relative aspect-[16/9] min-h-[260px] sm:min-h-[340px] overflow-hidden bg-dark-card border border-gold-main/30 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)] rounded-2xl sm:rounded-3xl">
             <img
               ref={parallaxImgRef}
               src={IMAGES.treatmentRoomImage}
@@ -111,7 +111,7 @@ export function ExperienceSection() {
               className="absolute inset-0 pointer-events-none shadow-[inset_0_0_65px_20px_#0A0A0A,inset_0_0_130px_45px_rgba(10,10,10,0.75)]"
               aria-hidden="true"
             />
-            <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
+            <div className="absolute inset-0 border border-gold-main/20 pointer-events-none rounded-2xl sm:rounded-3xl" />
           </div>
         </div>
       </div>

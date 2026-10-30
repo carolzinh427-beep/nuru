@@ -141,14 +141,14 @@ export function Hero3D() {
             <button
               type="button"
               onClick={() => openWhatsapp(whatsappMessages.general)}
-              className="btn-primary w-full sm:w-auto"
+              className="btn-primary w-full sm:w-auto rounded-full"
             >
               {t.hero.ctaPrimary}
             </button>
             <button
               type="button"
               onClick={scrollToMenu}
-              className="btn-secondary w-full sm:w-auto"
+              className="btn-secondary w-full sm:w-auto rounded-full"
             >
               {t.hero.ctaSecondary}
             </button>
@@ -171,10 +171,10 @@ export function Hero3D() {
           <span className="text-[11px] tracking-widest uppercase font-medium">
             SCROLL TO EXPLORE
           </span>
-          <div className="w-[1px] h-7 bg-border-subtle relative overflow-hidden flex items-center justify-center">
+          <div className="w-[1px] h-7 bg-border-subtle relative overflow-hidden flex items-center justify-center rounded-full">
             <div
               ref={scrollIndicatorRef}
-              className="w-[2px] h-3 bg-gold-main absolute top-0"
+              className="w-[2px] h-3 bg-gold-main absolute top-0 rounded-full"
             />
           </div>
         </button>

@@ -205,3 +205,4 @@ export function HeroLigatureTitle({ title = "The Art of Touch" }) {
 }
 
 export default HeroLigatureTitle;
+
