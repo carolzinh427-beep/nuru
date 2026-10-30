@@ -36,15 +36,15 @@ export function Header() {
 
   return (
     <>
-      {/* Floating Navbar Container: Appears smoothly upon scroll */}
+      {/* Desktop Floating Navbar: Centered pill appearing upon scroll */}
       <header
-        className={`fixed top-3 sm:top-5 left-0 right-0 z-40 flex justify-center px-3 sm:px-6 transition-all duration-500 ease-out ${
+        className={`hidden md:flex fixed top-4 sm:top-5 left-0 right-0 z-40 justify-center px-4 sm:px-6 transition-all duration-500 ease-out ${
           isScrolled
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 -translate-y-8 pointer-events-none'
         }`}
       >
-        <div className="w-full max-w-5xl rounded-full bg-dark-deep/80 backdrop-blur-xl border border-gold-main/30 shadow-[0_16px_50px_rgba(0,0,0,0.85)] text-cream-text flex items-center justify-between px-4 sm:px-6 py-2 sm:py-2.5">
+        <div className="w-full max-w-5xl rounded-full bg-dark-deep/80 backdrop-blur-xl border border-gold-main/30 shadow-[0_16px_50px_rgba(0,0,0,0.85)] text-cream-text flex items-center justify-between px-6 py-2.5">
           {/* Logo with Transparent PNG (No Background) */}
           <a
             href="#home"
@@ -61,7 +61,7 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav
             aria-label="Primary navigation"
-            className="hidden md:flex items-center space-x-6"
+            className="flex items-center space-x-6"
           >
             {navLinks.map((link) => (
               <a
@@ -75,7 +75,7 @@ export function Header() {
           </nav>
 
           {/* Desktop Right: Language + Instagram + Floating CTA */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="flex items-center space-x-4">
             <LanguageSwitcher isScrolled={isScrolled} />
             <a
               href="https://instagram.com/nurumassagelondon"
@@ -96,36 +96,64 @@ export function Header() {
               {t.nav.cta}
             </button>
           </div>
-
-          {/* Mobile Right: Language + Hamburger */}
-          <div className="flex md:hidden items-center space-x-2">
-            <LanguageSwitcher isScrolled={isScrolled} />
-            <button
-              ref={hamburgerButtonRef}
-              type="button"
-              onClick={() => setIsMobileMenuOpen(true)}
-              aria-label="Open navigation menu"
-              aria-expanded={isMobileMenuOpen}
-              className="p-2 text-cream-text hover:text-gold-main transition-colors duration-300 focus-visible:outline-gold-main"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="square"
-                  strokeLinejoin="miter"
-                  strokeWidth="1.5"
-                  d="M4 7h16M4 12h16M4 17h16"
-                />
-              </svg>
-            </button>
-          </div>
         </div>
       </header>
+
+      {/* Mobile Top-Left Corner: Floating Glass Brand Logo */}
+      <div
+        className={`fixed top-3 left-3 sm:top-4 sm:left-4 z-40 md:hidden transition-all duration-500 ease-out ${
+          isScrolled
+            ? 'opacity-100 translate-y-0 pointer-events-auto'
+            : 'opacity-90 translate-y-0 pointer-events-auto'
+        }`}
+      >
+        <a
+          href="#home"
+          className="rounded-full bg-dark-deep/85 backdrop-blur-2xl border border-gold-main/30 shadow-[0_8px_30px_rgba(0,0,0,0.85)] px-3 py-1.5 flex items-center group focus-visible:outline-gold-main active:scale-95 transition-transform duration-200"
+          aria-label="Nuru Massage London Home"
+        >
+          <img
+            src="/images/logo-navbar.png"
+            alt="Nuru Massage London"
+            className="h-7 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          />
+        </a>
+      </div>
+
+      {/* Mobile Top-Right Corner: Floating Glass Navbar Pill */}
+      <div
+        className={`fixed top-3 right-3 sm:top-4 sm:right-4 z-40 md:hidden transition-all duration-500 ease-out ${
+          isScrolled
+            ? 'opacity-100 translate-y-0 pointer-events-auto'
+            : 'opacity-95 translate-y-0 pointer-events-auto'
+        }`}
+      >
+        <div className="rounded-full bg-dark-deep/85 backdrop-blur-2xl border border-gold-main/40 text-cream-text shadow-[0_8px_32px_rgba(0,0,0,0.85),0_0_24px_rgba(194,142,66,0.18)] px-3 py-1.5 flex items-center space-x-2.5">
+          <LanguageSwitcher isScrolled={true} />
+
+          {/* Subtle gold separator */}
+          <span className="w-[1px] h-3.5 bg-gold-main/30 shrink-0" aria-hidden="true" />
+
+          {/* Trigger button opening glass menu */}
+          <button
+            ref={hamburgerButtonRef}
+            type="button"
+            onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Open navigation menu"
+            aria-expanded={isMobileMenuOpen}
+            className="group flex items-center space-x-1.5 text-gold-main hover:text-gold-light focus-visible:outline-gold-main py-0.5 active:scale-95 transition-transform duration-200"
+          >
+            <span className="text-[10px] tracking-widest uppercase font-semibold text-gold-main">
+              MENU
+            </span>
+            <div className="w-4 h-3 flex flex-col justify-between items-end">
+              <span className="w-4 h-[1.5px] bg-gold-main rounded-full transition-all duration-300 group-hover:w-4" />
+              <span className="w-3 h-[1.5px] bg-gold-main rounded-full transition-all duration-300 group-hover:w-4" />
+              <span className="w-2 h-[1.5px] bg-gold-main rounded-full transition-all duration-300 group-hover:w-4" />
+            </div>
+          </button>
+        </div>
+      </div>
 
       {/* Fullscreen Mobile Menu */}
       <MobileMenu
