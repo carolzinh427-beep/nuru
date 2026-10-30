@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../context/LanguageContext';
 import { IMAGES } from '../data/content';
 import { openWhatsapp } from '../utils/whatsapp';
 import { useReducedMotion } from '../hooks/useReducedMotion';
+import AccordionGallery from './AccordionGallery';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +15,7 @@ export function AboutSection() {
   const sectionRef = useRef(null);
   const photosRef = useRef(null);
   const textRef = useRef(null);
+  const [mobileActiveIndex, setMobileActiveIndex] = useState(0);
 
   useEffect(() => {
     if (prefersReducedMotion) return;
@@ -55,10 +57,34 @@ export function AboutSection() {
           }
         );
       }
+
+      // Scroll-driven trigger for mobile vertical accordion:
+      // Scrolling down into section expands the bottom image and closes the top one;
+      // Scrolling back up closes the bottom image and restores the top one.
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: 'top 35%',
+        end: 'bottom 65%',
+        onEnter: () => setMobileActiveIndex(1),
+        onLeaveBack: () => setMobileActiveIndex(0),
+      });
     }, sectionRef);
 
     return () => ctx.revert();
   }, [prefersReducedMotion]);
+
+  const thaissaItems = [
+    {
+      image: IMAGES.therapistImage,
+      label: 'Thaissa · Studio Portrait',
+      alt: 'Thaissa | Private and sensual massage in Central London'
+    },
+    {
+      image: IMAGES.therapistEveningImage,
+      label: 'Thaissa · Sensual Elegance',
+      alt: 'Thaissa | Sensual Elegance in Central London'
+    }
+  ];
 
   return (
     <section
@@ -69,12 +95,32 @@ export function AboutSection() {
       <div className="container-max">
         {/* 2-Column Layout: Dual photos on one side, text on the other */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Dual photos of Thaissa with sensual vignette shading */}
+          {/* Left Column: Photos of Thaissa */}
           <div
             ref={photosRef}
             className="lg:col-span-6 order-2 lg:order-1 px-1 sm:px-2"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
+            {/* Mobile Vertical Accordion: React Bits AccordionGallery with scroll down/up transitions */}
+            <div className="block sm:hidden w-full max-w-sm mx-auto">
+              <AccordionGallery
+                items={thaissaItems}
+                orientation="vertical"
+                activeIndex={mobileActiveIndex}
+                onActiveChange={setMobileActiveIndex}
+                height={480}
+                gap={12}
+                radius={20}
+                expandRatio={0.72}
+                trigger="click"
+                grayscale={false}
+                accentColor="#D9A75E"
+                overlayColor="#0A0A0A"
+                textColor="#F5EFE6"
+              />
+            </div>
+
+            {/* Desktop & Tablet: Dual photo spread */}
+            <div className="hidden sm:grid sm:grid-cols-2 gap-4 max-w-xl mx-auto">
               {/* Photo 1: Studio portrait */}
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-dark-card border border-gold-main/30 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(194,142,66,0.12)] group rounded-2xl sm:rounded-3xl">
                 <img
