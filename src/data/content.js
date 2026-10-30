@@ -87,10 +87,10 @@ export const CONTENT = {
       ctaSecondary: "Explore the massage menu"
     },
     intro: {
-      eyebrow: "Central London",
-      title: "An intimate space, hidden in plain sight",
-      text: "Behind a quiet door near Victoria Station lies a space built entirely for sensation, low light, warm gold, and complete privacy",
-      note: "Your comfort, privacy and well-being are always a priority",
+      eyebrow: "",
+      title: "An Exclusive Massage Experience in London",
+      text: "Every session is thoughtfully designed to offer relaxation, comfort and a sense of escape, with attention to detail and your personal experience",
+      note: "Your comfort, privacy and satisfaction are always our priority",
       indicators: ["Near Victoria Station", "Open every day", "Complete privacy"]
     },
     menu: {
@@ -204,10 +204,10 @@ export const CONTENT = {
       ctaSecondary: "Conhecer as massagens"
     },
     intro: {
-      eyebrow: "Centro de Londres",
-      title: "Um espaço íntimo, escondido aos olhos de todos",
-      text: "Atrás de uma porta discreta perto da Victoria Station está um espaço criado inteiramente para a sensação, pouca luz, ouro quente e total privacidade",
-      note: "Seu conforto, sua privacidade e seu bem-estar são sempre prioridade",
+      eyebrow: "",
+      title: "Uma Experiência Exclusiva de Massagem em Londres",
+      text: "Cada sessão é cuidadosamente criada para proporcionar relaxamento, conforto e uma sensação de evasão, com atenção aos detalhes e à sua experiência pessoal",
+      note: "Seu conforto, sua privacidade e sua satisfação são sempre a nossa prioridade",
       indicators: ["Próximo à Victoria Station", "Aberto todos os dias", "Privacidade total"]
     },
     menu: {

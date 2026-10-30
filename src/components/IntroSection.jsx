@@ -95,9 +95,15 @@ export function IntroSection() {
               {t.intro.title}
             </h2>
 
-            <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-8 max-w-xl">
+            <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-6 max-w-xl">
               {t.intro.text}
             </p>
+
+            {t.intro.note && (
+              <p className="text-sm sm:text-base text-gold-light/85 font-light italic leading-relaxed mb-8 max-w-xl">
+                {t.intro.note}
+              </p>
+            )}
 
             {/* Three indicators */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-border-subtle max-w-xl">
