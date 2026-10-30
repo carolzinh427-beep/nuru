@@ -16,8 +16,8 @@ export const COMPANY = {
 export const IMAGES = {
   heroImage: "/images/hero-placeholder.jpg",
   therapistImage: "/images/therapist-placeholder.jpg",
-  locationImage: "/images/location-placeholder.jpg",
-  treatmentRoomImage: "/images/treatment-room-placeholder.jpg",
+  locationImage: "/images/venue-shower.jpg",
+  treatmentRoomImage: "/images/venue-suite.jpg",
   detailImage: "/images/detail-placeholder.jpg"
 };
 

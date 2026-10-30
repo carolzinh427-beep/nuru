@@ -102,8 +102,8 @@ export function ExperienceSection() {
             <img
               ref={parallaxImgRef}
               src={IMAGES.treatmentRoomImage}
-              alt="Discreet, clean massage environment"
-              className="w-full h-[120%] object-cover object-center -mt-[10%] filter saturate-[0.8] contrast-[1.1] brightness-[0.8]"
+              alt="Private candlelit massage suite with luxurious linens and warm oils"
+              className="w-full h-[120%] object-cover object-center -mt-[10%] filter saturate-[0.95] contrast-[1.05] brightness-[0.92]"
               loading="lazy"
             />
             <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />

@@ -126,8 +126,8 @@ export function IntroSection() {
             >
               <img
                 src={IMAGES.locationImage}
-                alt="Central London location near Victoria Station"
-                className="w-full h-full object-cover object-center filter saturate-[0.8] contrast-[1.1] brightness-[0.85]"
+                alt="Intimate candlelit sanctuary in Central London near Victoria Station"
+                className="w-full h-full object-cover object-center filter saturate-[0.92] contrast-[1.05] brightness-[0.95]"
                 loading="lazy"
               />
               <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
