@@ -22,7 +22,7 @@ export function Hero3D() {
     if (prefersReducedMotion) return;
 
     const ctx = gsap.context(() => {
-      // 1. Subtle parallax on background image
+      // 1. Subtle parallax on background massage image
       if (bgImageRef.current) {
         gsap.to(bgImageRef.current, {
           yPercent: 18,
@@ -100,25 +100,31 @@ export function Hero3D() {
       className="relative min-h-screen w-full bg-dark-deep text-cream-text overflow-hidden flex flex-col justify-between"
       style={{ minHeight: '100vh' }}
     >
-      {/* Background Atmosphere with Parallax */}
+      {/* Background Massage Image with Parallax and Elegant Bottom Shadow */}
       <div
-        className="absolute inset-0 pointer-events-none z-0 overflow-hidden"
+        className="absolute inset-0 pointer-events-none z-0 overflow-hidden shadow-[inset_0_-160px_100px_-20px_#0A0A0A,inset_0_120px_80px_-20px_#0A0A0A]"
         aria-hidden="true"
       >
         <img
           ref={bgImageRef}
           src={IMAGES.heroImage}
           alt=""
-          className="w-full h-[120%] object-cover object-center -mt-[10%] filter brightness-[0.2] contrast-[1.2] saturate-[0.6] opacity-35"
+          className="w-full h-[125%] object-cover object-center -mt-[12%] filter brightness-[0.38] contrast-[1.12] saturate-[0.8] opacity-55"
         />
         {/* Solid dark tint overlay */}
-        <div className="absolute inset-0 bg-dark-deep/85" />
+        <div className="absolute inset-0 bg-dark-deep/65" />
       </div>
+
+      {/* Elegant Deep Bottom Shadow: Blends into next section seamlessly */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-56 pointer-events-none z-10 shadow-[inset_0_-160px_100px_-20px_#0A0A0A]"
+        aria-hidden="true"
+      />
 
       {/* Main Hero Content: Centered, no edge touching */}
       <div
         ref={contentRef}
-        className="relative z-10 container-max pt-36 sm:pt-44 pb-16 flex-1 flex flex-col justify-center items-center text-center"
+        className="relative z-20 container-max pt-36 sm:pt-44 pb-16 flex-1 flex flex-col justify-center items-center text-center"
       >
         <div className="max-w-3xl mx-auto flex flex-col items-center text-center px-4">
           {/* Subtle gold indicator */}
@@ -166,7 +172,7 @@ export function Hero3D() {
       {/* Bottom bar with Animated Scroll Indicator: Centered, safe gutters */}
       <div
         ref={bottomBarRef}
-        className="relative z-10 container-max pb-8 pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between text-xs text-gray-warm tracking-wider gap-4 text-center"
+        className="relative z-20 container-max pb-8 pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between text-xs text-gray-warm tracking-wider gap-4 text-center"
       >
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
           <span>CENTRAL LONDON</span>
