@@ -35,32 +35,34 @@ export function Header() {
 
   return (
     <>
+      {/* Floating Navbar Container */}
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-out ${
-          isScrolled
-            ? 'bg-dark-deep/75 backdrop-blur-xl border-b border-gold-main/25 py-3.5 shadow-[0_10px_35px_rgba(0,0,0,0.5)] text-cream-text'
-            : 'bg-dark-deep/40 backdrop-blur-md border-b border-white/[0.05] py-5 text-cream-text'
-        }`}
+        className="fixed top-3 sm:top-5 left-0 right-0 z-40 flex justify-center px-3 sm:px-6 pointer-events-none"
       >
-        <div className="container-max flex items-center justify-between">
-          {/* Logo */}
+        <div
+          className={`pointer-events-auto w-full max-w-5xl rounded-full transition-all duration-500 ease-out flex items-center justify-between px-4 sm:px-6 py-2 sm:py-2.5 ${
+            isScrolled
+              ? 'bg-dark-deep/75 backdrop-blur-xl border border-gold-main/30 shadow-[0_16px_50px_rgba(0,0,0,0.7)] text-cream-text'
+              : 'bg-dark-deep/45 backdrop-blur-md border border-gold-main/20 shadow-[0_8px_32px_rgba(0,0,0,0.5)] text-cream-text'
+          }`}
+        >
+          {/* Logo with User Uploaded Image */}
           <a
             href="#home"
-            className="group flex flex-col focus-visible:outline-gold-main"
+            className="flex items-center focus-visible:outline-gold-main group"
             aria-label="Nuru Massage London Home"
           >
-            <span className="font-serif text-xl sm:text-2xl tracking-[0.2em] font-normal text-cream-text transition-colors duration-300 group-hover:text-gold-light">
-              NURU
-            </span>
-            <span className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase -mt-1 font-medium text-gold-main transition-colors duration-300 group-hover:text-gold-light">
-              MASSAGE LONDON
-            </span>
+            <img
+              src="/images/logo-navbar.jpg"
+              alt="Nuru Massage London"
+              className="h-8 sm:h-10 md:h-11 w-auto object-contain mix-blend-screen transition-transform duration-300 group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop Navigation */}
           <nav
             aria-label="Primary navigation"
-            className="hidden md:flex items-center space-x-8"
+            className="hidden md:flex items-center space-x-7"
           >
             {navLinks.map((link) => (
               <a
@@ -73,20 +75,20 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Desktop Right: Language + Glassmorphic CTA */}
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Desktop Right: Language + Floating Glass CTA */}
+          <div className="hidden md:flex items-center space-x-5">
             <LanguageSwitcher isScrolled={isScrolled} />
             <button
               type="button"
               onClick={() => openWhatsapp(whatsappMessages.general)}
-              className="text-xs tracking-wider uppercase px-5 py-2.5 transition-all duration-300 border border-gold-main/60 bg-dark-deep/40 backdrop-blur-sm text-gold-main hover:bg-gold-main hover:text-dark-deep hover:border-gold-main font-medium shadow-[0_2px_12px_rgba(212,175,55,0.15)]"
+              className="text-xs tracking-wider uppercase px-5 py-2 rounded-full transition-all duration-300 border border-gold-main/60 bg-dark-deep/40 backdrop-blur-sm text-gold-main hover:bg-gold-main hover:text-dark-deep hover:border-gold-main font-medium shadow-[0_2px_12px_rgba(212,175,55,0.18)]"
             >
               {t.nav.cta}
             </button>
           </div>
 
           {/* Mobile Right: Language + Hamburger */}
-          <div className="flex md:hidden items-center space-x-3">
+          <div className="flex md:hidden items-center space-x-2">
             <LanguageSwitcher isScrolled={isScrolled} />
             <button
               ref={hamburgerButtonRef}

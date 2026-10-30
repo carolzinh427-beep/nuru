@@ -94,13 +94,12 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
     >
       {/* Top row */}
       <div className="flex items-center justify-between border-b border-border-subtle pb-6">
-        <div>
-          <span className="font-serif tracking-widest text-lg font-normal text-cream-text block">
-            NURU
-          </span>
-          <span className="text-[10px] tracking-[0.3em] text-gold-main block uppercase font-medium">
-            MASSAGE LONDON
-          </span>
+        <div className="flex items-center">
+          <img
+            src="/images/logo-navbar.jpg"
+            alt="Nuru Massage London"
+            className="h-9 sm:h-10 w-auto object-contain mix-blend-screen"
+          />
         </div>
 
         <button

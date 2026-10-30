@@ -16,18 +16,17 @@ export function Footer() {
   return (
     <footer className="bg-dark-deep text-cream-text pt-20 pb-12 border-t border-border-subtle">
       <div className="container-max flex flex-col items-center text-center px-4">
-        {/* Brand centered */}
+        {/* Brand logo centered */}
         <a
           href="#home"
-          className="inline-flex flex-col items-center mb-6 focus-visible:outline-gold-main"
+          className="inline-flex items-center mb-8 focus-visible:outline-gold-main group"
           aria-label="Nuru Massage London Return to Top"
         >
-          <span className="font-serif text-2xl tracking-[0.2em] font-normal text-cream-text">
-            NURU
-          </span>
-          <span className="text-[10px] tracking-[0.3em] text-gold-main uppercase -mt-1 font-medium">
-            MASSAGE LONDON
-          </span>
+          <img
+            src="/images/logo-navbar.jpg"
+            alt="Nuru Massage London"
+            className="h-12 sm:h-14 w-auto object-contain mix-blend-screen transition-transform duration-300 group-hover:scale-105"
+          />
         </a>
 
         <p className="text-sm text-gray-warm font-light leading-relaxed max-w-md mx-auto mb-10 text-center">
