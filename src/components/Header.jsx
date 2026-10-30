@@ -81,7 +81,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => openWhatsapp(whatsappMessages.general)}
-              className="text-xs tracking-wider uppercase px-5 py-2 rounded-full transition-all duration-300 border border-gold-main/60 bg-dark-deep/40 backdrop-blur-sm text-gold-main hover:bg-gold-main hover:text-dark-deep hover:border-gold-main font-medium shadow-[0_2px_12px_rgba(212,175,55,0.18)]"
+              className="text-xs tracking-wider uppercase px-5 py-2 rounded-full transition-all duration-300 border border-gold-main/60 bg-dark-deep/40 backdrop-blur-sm text-gold-main hover:bg-gold-main hover:text-dark-deep hover:border-gold-main font-medium shadow-[0_2px_12px_rgba(194,142,66,0.18)]"
             >
               {t.nav.cta}
             </button>

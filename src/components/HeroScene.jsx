@@ -47,14 +47,14 @@ export function HeroScene({ scrollProgress = 0, mouse = { x: 0, y: 0 }, isMobile
   return (
     <>
       <ambientLight intensity={0.4} color="#161412" />
-      <directionalLight position={[6, 6, 5]} intensity={1.6} color="#E8C878" />
-      <directionalLight position={[-6, -5, -4]} intensity={0.6} color="#C9A24B" />
-      <pointLight position={[0, 0, 3]} intensity={0.8} color="#C9A24B" />
+      <directionalLight position={[6, 6, 5]} intensity={1.6} color="#D9A75E" />
+      <directionalLight position={[-6, -5, -4]} intensity={0.6} color="#C28E42" />
+      <pointLight position={[0, 0, 3]} intensity={0.8} color="#C28E42" />
 
       <mesh ref={meshRef} position={[0, 0, 0]}>
         <icosahedronGeometry args={[radius, detail]} />
         <MeshDistortMaterial
-          color="#C9A24B"
+          color="#C28E42"
           roughness={0.42}
           metalness={0.75}
           distort={prefersReducedMotion ? 0.04 : 0.3}
