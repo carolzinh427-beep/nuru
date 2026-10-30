@@ -7,6 +7,7 @@ import IntroSection from './components/IntroSection';
 import MassageMenu from './components/MassageMenu';
 import ExperienceSection from './components/ExperienceSection';
 import AboutSection from './components/AboutSection';
+import TestimonialsSection from './components/TestimonialsSection';
 import BookingSection from './components/BookingSection';
 import LocationSection from './components/LocationSection';
 import ContactSection from './components/ContactSection';
@@ -48,6 +49,12 @@ export function App() {
           </AnimatedContent>
 
           <OrganicCurveDivider variant="oil" flip={true} />
+
+          <AnimatedContent distance={45} duration={0.85} ease="power3.out" threshold={0.12}>
+            <TestimonialsSection />
+          </AnimatedContent>
+
+          <OrganicCurveDivider variant="duo" />
 
           <AnimatedContent distance={45} duration={0.85} ease="power3.out" threshold={0.12}>
             <BookingSection />

@@ -129,6 +129,50 @@ export const CONTENT = {
       note: "Exclusive and dedicated attention for every private session",
       cta: ""
     },
+    testimonials: {
+      title: "Words from Our Guests",
+      subtitle: "Verified experiences shared by private visitors on massagehub.uk",
+      platform: "massagehub.uk",
+      badge: "Verified Client Reviews",
+      items: [
+        {
+          id: "jose",
+          author: "Jose",
+          initial: "J",
+          date: "25 Jul 2026",
+          rating: 5,
+          text: "Best experience I've had. She is amazing and very skilled... sure I will book again",
+          verified: true
+        },
+        {
+          id: "rick",
+          author: "Rick",
+          initial: "R",
+          date: "16 Jun 2026",
+          rating: 5,
+          text: "Absolutely fantastic experience! The massage was incredible, very attentive and expertly done. The therapist is beautiful, kind, and extremely polite. She made me feel comfortable from the moment I arrived. I left feeling relaxed, refreshed, and looking forward to my next visit. Highly recommend!",
+          verified: true
+        },
+        {
+          id: "adam",
+          author: "Adam",
+          initial: "A",
+          date: "19 Jun 2026",
+          rating: 5,
+          text: "Excellent",
+          verified: true
+        },
+        {
+          id: "jey",
+          author: "Jey",
+          initial: "J",
+          date: "29 Jun 2026",
+          rating: 5,
+          text: "Best massage I've had in my life. Highly recommend",
+          verified: true
+        }
+      ]
+    },
     booking: {
       eyebrow: "",
       title: "",
@@ -245,6 +289,50 @@ export const CONTENT = {
       text: "Recebendo você em um santuário íntimo e iluminado a ouro no centro de Londres, Thaissa proporciona uma experiência de massagem profundamente envolvente e sensual, onde óleos aquecidos, presença cativante e toque delicado despertam todos os sentidos com absoluta discrição",
       note: "Atendimento exclusivo e dedicado para cada sessão privativa",
       cta: ""
+    },
+    testimonials: {
+      title: "Depoimentos Exclusivos",
+      subtitle: "Avaliações verificadas de visitantes privativos no massagehub.uk",
+      platform: "massagehub.uk",
+      badge: "Avaliações Verificadas",
+      items: [
+        {
+          id: "jose",
+          author: "Jose",
+          initial: "J",
+          date: "25 Jul 2026",
+          rating: 5,
+          text: "Melhor experiência que já tive. Ela é incrível e muito habilidosa... com certeza agendarei novamente",
+          verified: true
+        },
+        {
+          id: "rick",
+          author: "Rick",
+          initial: "R",
+          date: "16 Jun 2026",
+          rating: 5,
+          text: "Experiência absolutamente fantástica! A massagem foi incrível, muito atenciosa e feita com maestria. A terapeuta é linda, gentil e extremamente educada. Ela me fez sentir confortável desde o momento em que cheguei. Saí me sentindo relaxado, revigorado e ansioso pela próxima visita. Recomendo muito!",
+          verified: true
+        },
+        {
+          id: "adam",
+          author: "Adam",
+          initial: "A",
+          date: "19 Jun 2026",
+          rating: 5,
+          text: "Excelente",
+          verified: true
+        },
+        {
+          id: "jey",
+          author: "Jey",
+          initial: "J",
+          date: "29 Jun 2026",
+          rating: 5,
+          text: "Melhor massagem da minha vida. Recomendo muito",
+          verified: true
+        }
+      ]
     },
     booking: {
       eyebrow: "",
