@@ -127,15 +127,6 @@ export function Hero3D() {
         className="relative z-20 container-max pt-36 sm:pt-44 pb-16 flex-1 flex flex-col justify-center items-center text-center"
       >
         <div className="max-w-3xl mx-auto flex flex-col items-center text-center px-4">
-          {/* Subtle gold indicator */}
-          <div className="inline-flex items-center justify-center space-x-3 mb-6">
-            <span className="w-8 h-[1px] bg-gold-main inline-block" />
-            <span className="text-xs tracking-widest-plus uppercase text-gold-main font-semibold">
-              Central London Victoria
-            </span>
-            <span className="w-8 h-[1px] bg-gold-main inline-block" />
-          </div>
-
           {/* Single H1 on the site */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-cream-text font-normal leading-[1.14] mb-6 text-center">
             {t.hero.title}
@@ -174,9 +165,8 @@ export function Hero3D() {
         ref={bottomBarRef}
         className="relative z-20 container-max pb-8 pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between text-xs text-gray-warm tracking-wider gap-4 text-center"
       >
-        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
-          <span>CENTRAL LONDON</span>
-          <span>VICTORIA STATION</span>
+        <div className="flex items-center justify-center space-x-2 text-center">
+          <span className="w-1.5 h-1.5 bg-gold-main shrink-0" />
           <span>10:00 TO 23:00</span>
         </div>
 
