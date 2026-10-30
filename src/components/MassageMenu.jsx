@@ -1,18 +1,74 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../context/LanguageContext';
 import { openWhatsapp } from '../utils/whatsapp';
+import { useReducedMotion } from '../hooks/useReducedMotion';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function MassageMenu() {
   const { t, language, services, whatsappMessages } = useLanguage();
+  const prefersReducedMotion = useReducedMotion();
+  const sectionRef = useRef(null);
+  const headerRef = useRef(null);
+  const cardsRef = useRef(null);
+
+  useEffect(() => {
+    if (prefersReducedMotion) return;
+
+    const ctx = gsap.context(() => {
+      if (headerRef.current) {
+        gsap.fromTo(
+          headerRef.current,
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.9,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 80%',
+              toggleActions: 'play none none reverse'
+            }
+          }
+        );
+      }
+
+      if (cardsRef.current) {
+        const cards = cardsRef.current.children;
+        gsap.fromTo(
+          cards,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.9,
+            stagger: 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: cardsRef.current,
+              start: 'top 85%',
+              toggleActions: 'play none none reverse'
+            }
+          }
+        );
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, [prefersReducedMotion]);
 
   return (
     <section
       id="menu"
+      ref={sectionRef}
       className="py-24 sm:py-32 bg-dark-deep text-cream-text border-b border-border-subtle"
     >
       <div className="container-max">
         {/* Header: Centered */}
-        <div className="max-w-2xl mx-auto text-center mb-16 sm:mb-20 px-4">
+        <div ref={headerRef} className="max-w-2xl mx-auto text-center mb-16 sm:mb-20 px-4">
           <span className="eyebrow mb-4 block text-center">{t.menu.eyebrow}</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-6 text-center">
             {t.menu.title}
@@ -23,7 +79,7 @@ export function MassageMenu() {
         </div>
 
         {/* Services Grid (2 cards): Centered with safe margins */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-16 max-w-4xl mx-auto px-2 sm:px-4">
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-16 max-w-4xl mx-auto px-2 sm:px-4">
           {services.map((service) => {
             const serviceName = service.name[language] || service.name.en;
             const serviceDesc = service.description[language] || service.description.en;

@@ -1,17 +1,52 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../context/LanguageContext';
 import { openWhatsapp } from '../utils/whatsapp';
+import { useReducedMotion } from '../hooks/useReducedMotion';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function ContactSection() {
   const { t, whatsappMessages } = useLanguage();
+  const prefersReducedMotion = useReducedMotion();
+  const sectionRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    if (prefersReducedMotion) return;
+
+    const ctx = gsap.context(() => {
+      if (contentRef.current) {
+        gsap.fromTo(
+          contentRef.current,
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.9,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 75%',
+              toggleActions: 'play none none reverse'
+            }
+          }
+        );
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, [prefersReducedMotion]);
 
   return (
     <section
       id="contact"
+      ref={sectionRef}
       className="py-24 sm:py-32 bg-dark-deep text-cream-text border-b border-border-subtle"
     >
       <div className="container-max">
-        <div className="max-w-3xl mx-auto flex flex-col items-center text-center px-4">
+        <div ref={contentRef} className="max-w-3xl mx-auto flex flex-col items-center text-center px-4">
           <span className="eyebrow mb-4 inline-block text-center">{t.contact.eyebrow}</span>
 
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif text-cream-text font-normal leading-tight mb-8 text-center">

@@ -7,6 +7,7 @@ import IntroSection from './components/IntroSection';
 import MassageMenu from './components/MassageMenu';
 import ExperienceSection from './components/ExperienceSection';
 import AboutSection from './components/AboutSection';
+import BookingSection from './components/BookingSection';
 import LocationSection from './components/LocationSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -24,6 +25,7 @@ export function App() {
           <MassageMenu />
           <ExperienceSection />
           <AboutSection />
+          <BookingSection />
           <LocationSection />
           <ContactSection />
         </main>

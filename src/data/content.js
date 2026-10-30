@@ -2,7 +2,9 @@ export const COMPANY = {
   name: "Nuru Massage London",
   whatsappNumber: "447561576379",
   whatsappDisplay: "+44 7561 576379",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Victoria+Station+London",
+  mapsUrl: "https://maps.app.goo.gl/TpG78Kb4h8DY3kZLA",
+  googleReviewUrl: "https://maps.app.goo.gl/TpG78Kb4h8DY3kZLA",
+  instagramUrl: "https://instagram.com/nurumassagelondon",
   hours: {
     en: "Every day, 10:00 AM to 11:00 PM",
     pt: "Todos os dias, das 10h às 23h"
@@ -16,6 +18,7 @@ export const COMPANY = {
 export const IMAGES = {
   heroImage: "/images/hero-placeholder.jpg",
   therapistImage: "/images/thaissa.jpg",
+  therapistEveningImage: "/images/thaissa-evening.png",
   locationImage: "/images/venue-shower.jpg",
   treatmentRoomImage: "/images/venue-suite.jpg",
   detailImage: "/images/detail-placeholder.jpg"
@@ -71,6 +74,7 @@ export const CONTENT = {
       home: "Home",
       menu: "Massage Menu",
       about: "About",
+      booking: "Book",
       location: "Location",
       contact: "Contact",
       cta: "Contact via WhatsApp"
@@ -125,6 +129,28 @@ export const CONTENT = {
       note: "Exclusive and dedicated attention for every private session",
       cta: "Meet Thaissa via WhatsApp"
     },
+    booking: {
+      eyebrow: "Online Appointments",
+      title: "Book with Thaissa",
+      subtitle: "Private bookings every day from 10:00 AM to 11:00 PM in Central London",
+      hoursBadge: "Open Daily 10:00 AM to 11:00 PM",
+      nameLabel: "Your Name",
+      namePlaceholder: "Enter your full name",
+      dateLabel: "Select Date",
+      timeLabel: "Select Time",
+      timePlaceholder: "Choose an available time slot",
+      serviceLabel: "Select Experience or Query",
+      servicePlaceholder: "Select one of the services",
+      serviceOptions: [
+        { id: "mix", label: "Mix Body to Body Massage" },
+        { id: "nuru", label: "Nuru Massage" },
+        { id: "query", label: "General Enquiry or Question" }
+      ],
+      noteLabel: "Preferences or Notes (Optional)",
+      notePlaceholder: "Any special request or question for Thaissa",
+      submitButton: "Request Booking via WhatsApp",
+      whatsappLead: "Hello Thaissa, I would like to book an appointment"
+    },
     location: {
       eyebrow: "Location",
       title: "Find us near Victoria Station",
@@ -134,7 +160,9 @@ export const CONTENT = {
         hours: "Every day, 10:00 AM to 11:00 PM"
       },
       text: "Conveniently located in Central London, with discreet and easy access from Victoria Station",
-      cta: "Open location in Google Maps"
+      cta: "Open location in Google Maps",
+      reviewCta: "Review on Google",
+      instagramCta: "Instagram"
     },
     contact: {
       eyebrow: "Contact",
@@ -151,6 +179,9 @@ export const CONTENT = {
       linksTitle: "Explore",
       contactTitle: "Contact",
       hoursTitle: "Hours",
+      hoursText: "Daily 10:00 AM to 11:00 PM",
+      reviewText: "Review on Google",
+      instagramText: "Instagram",
       disclaimer: "Please contact us directly for prices, availability and further information",
       copyright: "© 2026 Nuru Massage London All rights reserved"
     }
@@ -160,6 +191,7 @@ export const CONTENT = {
       home: "Início",
       menu: "Cardápio de Massagens",
       about: "Sobre",
+      booking: "Agendamento",
       location: "Localização",
       contact: "Contato",
       cta: "Falar pelo WhatsApp"
@@ -214,6 +246,28 @@ export const CONTENT = {
       note: "Atendimento exclusivo e dedicado para cada sessão privativa",
       cta: "Falar com Thaissa pelo WhatsApp"
     },
+    booking: {
+      eyebrow: "Agendamento Online",
+      title: "Agende com Thaissa",
+      subtitle: "Atendimento privativo todos os dias das 10h às 23h no centro de Londres",
+      hoursBadge: "Aberto Todos os Dias das 10h às 23h",
+      nameLabel: "Seu Nome",
+      namePlaceholder: "Digite seu nome completo",
+      dateLabel: "Escolha a Data",
+      timeLabel: "Escolha o Horário",
+      timePlaceholder: "Selecione o horário desejado",
+      serviceLabel: "Escolha a Experiência ou Dúvida",
+      servicePlaceholder: "Selecione um dos serviços",
+      serviceOptions: [
+        { id: "mix", label: "Massagem Mix Body to Body" },
+        { id: "nuru", label: "Massagem Nuru" },
+        { id: "query", label: "Dúvida ou Informações Gerais" }
+      ],
+      noteLabel: "Preferências ou Observações (Opcional)",
+      notePlaceholder: "Alguma dúvida ou preferência para Thaissa",
+      submitButton: "Enviar Agendamento pelo WhatsApp",
+      whatsappLead: "Olá Thaissa, gostaria de agendar um horário"
+    },
     location: {
       eyebrow: "Localização",
       title: "Encontre-nos próximo à Victoria Station",
@@ -223,7 +277,9 @@ export const CONTENT = {
         hours: "Todos os dias, das 10h às 23h"
       },
       text: "Convenientemente localizado no centro de Londres, com acesso discreto e fácil a partir da Victoria Station",
-      cta: "Abrir localização no Google Maps"
+      cta: "Abrir localização no Google Maps",
+      reviewCta: "Avalie no Google",
+      instagramCta: "Instagram"
     },
     contact: {
       eyebrow: "Contato",
@@ -240,6 +296,9 @@ export const CONTENT = {
       linksTitle: "Explorar",
       contactTitle: "Contato",
       hoursTitle: "Horários",
+      hoursText: "Todos os dias das 10h às 23h",
+      reviewText: "Avalie no Google",
+      instagramText: "Instagram",
       disclaimer: "Entre em contato diretamente para preços, disponibilidade e mais informações",
       copyright: "© 2026 Nuru Massage London Todos os direitos reservados"
     }
