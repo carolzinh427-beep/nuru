@@ -130,10 +130,10 @@ export const CONTENT = {
       cta: ""
     },
     booking: {
-      eyebrow: "Online Appointments",
-      title: "Book with Thaissa",
-      subtitle: "Private bookings every day in Central London",
-      hoursBadge: "Open Daily 10:00 AM to 11:00 PM",
+      eyebrow: "",
+      title: "",
+      subtitle: "",
+      hoursBadge: "",
       nameLabel: "Your Name",
       namePlaceholder: "Enter your full name",
       dateLabel: "Select Date",
@@ -148,7 +148,7 @@ export const CONTENT = {
       ],
       noteLabel: "Preferences or Notes (Optional)",
       notePlaceholder: "Any special request or question for Thaissa",
-      submitButton: "Request Booking via WhatsApp",
+      submitButton: "Request Booking",
       whatsappLead: "Hello Thaissa, I would like to book an appointment"
     },
     location: {
@@ -247,10 +247,10 @@ export const CONTENT = {
       cta: ""
     },
     booking: {
-      eyebrow: "Agendamento Online",
-      title: "Agende com Thaissa",
-      subtitle: "Atendimento privativo todos os dias no centro de Londres",
-      hoursBadge: "Aberto Todos os Dias das 10h às 23h",
+      eyebrow: "",
+      title: "",
+      subtitle: "",
+      hoursBadge: "",
       nameLabel: "Seu Nome",
       namePlaceholder: "Digite seu nome completo",
       dateLabel: "Escolha a Data",
@@ -265,7 +265,7 @@ export const CONTENT = {
       ],
       noteLabel: "Preferências ou Observações (Opcional)",
       notePlaceholder: "Alguma dúvida ou preferência para Thaissa",
-      submitButton: "Enviar Agendamento pelo WhatsApp",
+      submitButton: "Request Booking",
       whatsappLead: "Olá Thaissa, gostaria de agendar um horário"
     },
     location: {

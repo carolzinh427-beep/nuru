@@ -243,3 +243,4 @@ export const AccordionGallery = ({
 };
 
 export default AccordionGallery;
+
