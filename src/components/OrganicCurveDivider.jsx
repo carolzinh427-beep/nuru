@@ -81,40 +81,60 @@ export function OrganicCurveDivider({ variant = 'silk', className = '', flip = f
           </g>
 
           {/* Top Silk Curve: Flowing down, pinching, then rising */}
+          {/* Layer 1: Outer Warm Bronze Body & Glow */}
           <path
             ref={pathRef}
             d="M-40 40 C 260 140, 480 135, 760 70 C 1040 10, 1260 15, 1480 80"
             stroke="#C28E42"
-            strokeWidth="2"
+            strokeWidth="2.8"
             strokeLinecap="round"
-            className="filter drop-shadow-[0_0_10px_rgba(194,142,66,0.4)]"
+            className="filter drop-shadow-[0_0_14px_rgba(217,167,94,0.45)] drop-shadow-[0_0_24px_rgba(194,142,66,0.22)]"
           />
 
-          {/* Top Silk Secondary Highlight */}
+          {/* Layer 2: Champagne Gold Core */}
           <path
             d="M-40 40 C 260 140, 480 135, 760 70 C 1040 10, 1260 15, 1480 80"
             stroke="#D9A75E"
-            strokeWidth="0.75"
-            strokeOpacity="0.8"
+            strokeWidth="1.2"
+            strokeOpacity="0.9"
+            strokeLinecap="round"
+          />
+
+          {/* Layer 3: Razor Ivory Specular Shimmer */}
+          <path
+            d="M-40 40 C 260 140, 480 135, 760 70 C 1040 10, 1260 15, 1480 80"
+            stroke="#F5EFE6"
+            strokeWidth="0.5"
+            strokeOpacity="0.75"
             strokeLinecap="round"
           />
 
           {/* Bottom Silk Curve: Inverted flow creating sensual waist */}
+          {/* Layer 1: Outer Warm Bronze Body & Glow */}
           <path
             ref={secondaryPathRef}
             d="M-40 140 C 260 40, 480 45, 760 110 C 1040 170, 1260 165, 1480 100"
             stroke="#C28E42"
-            strokeWidth="2"
+            strokeWidth="2.8"
             strokeLinecap="round"
-            className="filter drop-shadow-[0_0_10px_rgba(194,142,66,0.4)]"
+            className="filter drop-shadow-[0_0_14px_rgba(217,167,94,0.45)] drop-shadow-[0_0_24px_rgba(194,142,66,0.22)]"
           />
 
-          {/* Bottom Silk Secondary Highlight */}
+          {/* Layer 2: Champagne Gold Core */}
           <path
             d="M-40 140 C 260 40, 480 45, 760 110 C 1040 170, 1260 165, 1480 100"
             stroke="#D9A75E"
-            strokeWidth="0.75"
-            strokeOpacity="0.8"
+            strokeWidth="1.2"
+            strokeOpacity="0.9"
+            strokeLinecap="round"
+          />
+
+          {/* Layer 3: Razor Ivory Specular Shimmer */}
+          <path
+            d="M-40 140 C 260 40, 480 45, 760 110 C 1040 170, 1260 165, 1480 100"
+            stroke="#F5EFE6"
+            strokeWidth="0.5"
+            strokeOpacity="0.75"
             strokeLinecap="round"
           />
         </svg>

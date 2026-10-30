@@ -109,11 +109,11 @@ export function Hero3D() {
         <img
           ref={bgImageRef}
           src={IMAGES.heroImage}
-          alt=""
-          className="w-full h-[125%] object-cover object-center -mt-[12%] filter brightness-[0.38] contrast-[1.12] saturate-[0.8] opacity-55"
+          alt="Candlelit luxury massage sanctuary in London"
+          className="w-full h-[125%] object-cover object-center -mt-[12%] filter brightness-[0.75] contrast-[1.12] saturate-[1.15] opacity-80"
         />
-        {/* Solid dark tint overlay */}
-        <div className="absolute inset-0 bg-dark-deep/65" />
+        {/* Solid dark tint overlay for high text contrast without extinguishing candle glow */}
+        <div className="absolute inset-0 bg-dark-deep/45" />
       </div>
 
       {/* Elegant Deep Bottom Shadow: Blends into next section seamlessly */}
@@ -131,8 +131,8 @@ export function Hero3D() {
           {/* Single H1 on the site: Art Nouveau Ligature Typography */}
           <HeroLigatureTitle title={t.hero.title} />
 
-          {/* Subtitle: Simple, highly legible font creating editorial perfumery contrast */}
-          <p className="text-base sm:text-lg text-gray-warm font-light leading-relaxed mb-10 max-w-2xl text-center font-sans tracking-wide">
+          {/* Subtitle: Editorial perfumery typography matching reference mockup, no ornaments underneath */}
+          <p className="text-xs sm:text-sm text-gold-light/95 font-light leading-relaxed mb-10 max-w-2xl text-center uppercase tracking-[0.24em] whitespace-pre-line font-sans">
             {t.hero.subtitle}
           </p>
 

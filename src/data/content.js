@@ -16,7 +16,7 @@ export const COMPANY = {
 };
 
 export const IMAGES = {
-  heroImage: "/images/hero-placeholder.jpg",
+  heroImage: "/images/hero-candlelit-sanctuary.jpg",
   therapistImage: "/images/thaissa.jpg",
   therapistEveningImage: "/images/thaissa-evening.png",
   locationImage: "/images/venue-shower.jpg",
@@ -81,7 +81,7 @@ export const CONTENT = {
     },
     hero: {
       title: "The Art of Touch",
-      subtitle: "Discover a world of warmth, tranquility and intimate relaxation",
+      subtitle: "Beyond relaxation, beyond the ordinary\nAn intimate experience in the heart of London",
       note: "",
       ctaPrimary: "Contact via WhatsApp",
       ctaSecondary: "Explore the massage menu"
@@ -198,7 +198,7 @@ export const CONTENT = {
     },
     hero: {
       title: "The Art of Touch",
-      subtitle: "Descubra um mundo de calor, tranquilidade e relaxamento íntimo",
+      subtitle: "Além do relaxamento, além do comum\nUma experiência íntima no coração de Londres",
       note: "",
       ctaPrimary: "Falar pelo WhatsApp",
       ctaSecondary: "Conhecer as massagens"
