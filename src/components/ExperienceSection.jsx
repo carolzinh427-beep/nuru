@@ -79,10 +79,10 @@ export function ExperienceSection() {
           {t.experience.pillars.map((pillar) => (
             <div
               key={pillar.number}
-              className="border-t border-border-subtle pt-8 flex flex-col items-center text-center"
+              className="border-t border-border-subtle hover:border-gold-main/40 transition-colors duration-300 pt-8 flex flex-col items-center text-center"
             >
               <div className="flex flex-col items-center">
-                <span className="font-serif text-4xl sm:text-5xl text-gold-main block mb-4 font-normal text-center">
+                <span className="font-serif text-5xl sm:text-6xl text-gold-main block mb-4 font-normal text-center tracking-tight">
                   {pillar.number}
                 </span>
                 <h3 className="text-xl sm:text-2xl font-serif text-cream-text font-normal mb-3 text-center">

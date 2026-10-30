@@ -36,8 +36,8 @@ export function AboutSection() {
             {t.about.text}
           </p>
 
-          <div className="border-t border-b border-border-subtle py-4 my-6 max-w-xl mx-auto">
-            <p className="text-sm text-gray-warm font-normal italic text-center">
+          <div className="border-t border-b border-gold-main/30 py-5 my-8 max-w-xl mx-auto">
+            <p className="text-sm sm:text-base text-gold-light/90 font-normal italic text-center">
               {t.about.note}
             </p>
           </div>

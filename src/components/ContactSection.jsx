@@ -34,7 +34,7 @@ export function ContactSection() {
             <button
               type="button"
               onClick={() => openWhatsapp(whatsappMessages.general)}
-              className="font-serif text-2xl sm:text-3xl text-gold-main hover:text-gold-light transition-colors focus-visible:outline-gold-main"
+              className="font-serif text-2xl sm:text-3xl text-gold-main hover:text-gold-light transition-all duration-200 focus-visible:outline-gold-main"
             >
               {company.whatsappDisplay}
             </button>

@@ -8,20 +8,22 @@ export default {
     extend: {
       colors: {
         'dark-deep': '#0A0A0A',
-        'dark-card': '#161412',
-        'gold-main': '#C9A24B',
-        'gold-light': '#E8C878',
-        'cream-text': '#F2EDE4',
-        'gray-warm': '#9A9287',
-        'border-subtle': '#2B2722',
+        'dark-card': '#141210',
+        'gold-main': '#D4AF37',
+        'gold-light': '#F5E2A8',
+        'gold-muted': '#9E8238',
+        'cream-text': '#F5EFE6',
+        'gray-warm': '#A39A8E',
+        'border-subtle': '#28231C',
         brand: {
           bg: '#0A0A0A',
-          card: '#161412',
-          gold: '#C9A24B',
-          goldLight: '#E8C878',
-          text: '#F2EDE4',
-          gray: '#9A9287',
-          border: '#2B2722',
+          card: '#141210',
+          gold: '#D4AF37',
+          goldLight: '#F5E2A8',
+          goldMuted: '#9E8238',
+          text: '#F5EFE6',
+          gray: '#A39A8E',
+          border: '#28231C',
         }
       },
       fontFamily: {
@@ -29,7 +31,7 @@ export default {
         sans: ['"Inter"', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
-        'widest-plus': '0.25em',
+        'widest-plus': '0.28em',
       }
     },
   },

@@ -24,7 +24,7 @@ export function LocationSection() {
 
           {/* Indicator blocks: Centered */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 w-full max-w-2xl">
-            <div className="border border-border-subtle p-5 bg-dark-card flex flex-col items-center text-center">
+            <div className="border border-border-subtle hover:border-gold-main/40 transition-colors duration-300 p-5 bg-dark-card flex flex-col items-center text-center">
               <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold text-center">
                 Area
               </span>
@@ -33,7 +33,7 @@ export function LocationSection() {
               </span>
             </div>
 
-            <div className="border border-border-subtle p-5 bg-dark-card flex flex-col items-center text-center">
+            <div className="border border-border-subtle hover:border-gold-main/40 transition-colors duration-300 p-5 bg-dark-card flex flex-col items-center text-center">
               <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold text-center">
                 Access
               </span>
@@ -42,7 +42,7 @@ export function LocationSection() {
               </span>
             </div>
 
-            <div className="border border-border-subtle p-5 bg-dark-card flex flex-col items-center text-center">
+            <div className="border border-border-subtle hover:border-gold-main/40 transition-colors duration-300 p-5 bg-dark-card flex flex-col items-center text-center">
               <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold text-center">
                 Hours
               </span>
