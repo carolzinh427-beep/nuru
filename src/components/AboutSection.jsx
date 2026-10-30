@@ -12,16 +12,11 @@ export function AboutSection() {
       className="py-24 sm:py-32 bg-dark-deep text-cream-text border-b border-border-subtle"
     >
       <div className="container-max">
-        <div className="max-w-3xl mx-auto flex flex-col items-center text-center px-4">
-          <span className="eyebrow mb-4 block text-center">{t.about.eyebrow}</span>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-8 text-center">
-            {t.about.title}
-          </h2>
-
-          {/* Discreet image centered with safe margins */}
-          <div className="w-full max-w-md mx-auto mb-10 px-4">
-            <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden bg-dark-card border border-border-subtle shadow-xl">
+        {/* 2-Column Layout: Image on one side, text on the other */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left Column: Image with safe margins, not touching screen edges */}
+          <div className="lg:col-span-5 order-2 lg:order-1 px-2 sm:px-4">
+            <div className="relative aspect-[4/5] w-full max-w-md mx-auto overflow-hidden bg-dark-card border border-border-subtle shadow-2xl">
               <img
                 src={IMAGES.therapistImage}
                 alt="Massage environment and attention to detail"
@@ -32,24 +27,33 @@ export function AboutSection() {
             </div>
           </div>
 
-          <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-6 text-center max-w-2xl">
-            {t.about.text}
-          </p>
+          {/* Right Column: Text content */}
+          <div className="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-center">
+            <span className="eyebrow mb-4 block">{t.about.eyebrow}</span>
 
-          <div className="border-t border-b border-gold-main/30 py-5 my-8 max-w-xl mx-auto">
-            <p className="text-sm sm:text-base text-gold-light/90 font-normal italic text-center">
-              {t.about.note}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-8">
+              {t.about.title}
+            </h2>
+
+            <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-6 max-w-xl">
+              {t.about.text}
             </p>
-          </div>
 
-          <div className="pt-6">
-            <button
-              type="button"
-              onClick={() => openWhatsapp(whatsappMessages.general)}
-              className="btn-primary"
-            >
-              {t.about.cta}
-            </button>
+            <div className="border-t border-b border-gold-main/30 py-5 my-8 max-w-lg">
+              <p className="text-sm sm:text-base text-gold-light/90 font-normal italic">
+                {t.about.note}
+              </p>
+            </div>
+
+            <div className="pt-4">
+              <button
+                type="button"
+                onClick={() => openWhatsapp(whatsappMessages.general)}
+                className="btn-primary"
+              >
+                {t.about.cta}
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -29,7 +29,7 @@ export function IntroSection() {
             scaleX: 1,
             duration: 1.2,
             ease: 'power2.out',
-            transformOrigin: 'center center',
+            transformOrigin: 'left center',
             scrollTrigger: {
               trigger: lineRef.current,
               start: 'top 85%',
@@ -84,51 +84,54 @@ export function IntroSection() {
       className="py-24 sm:py-32 bg-dark-deep text-cream-text border-b border-border-subtle"
     >
       <div className="container-max">
-        {/* Expanding decorative top line: Centered */}
-        <div ref={lineRef} className="gold-line max-w-md mx-auto mb-16 origin-center" />
+        {/* Expanding decorative top line */}
+        <div ref={lineRef} className="gold-line max-w-sm mb-16 origin-left" />
 
-        {/* Centered Content Block: No touching edges */}
-        <div ref={textColRef} className="max-w-3xl mx-auto text-center flex flex-col items-center px-4 mb-16">
-          <span className="eyebrow mb-4 block text-center">{t.intro.eyebrow}</span>
+        {/* 2-Column Layout: Text on one side, Image on the other (Safe Margins) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Text Column */}
+          <div ref={textColRef} className="lg:col-span-7 flex flex-col justify-center">
+            <span className="eyebrow mb-4 block">{t.intro.eyebrow}</span>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-8 text-center">
-            {t.intro.title}
-          </h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-8">
+              {t.intro.title}
+            </h2>
 
-          <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-6 text-center max-w-2xl">
-            {t.intro.text}
-          </p>
+            <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-6 max-w-xl">
+              {t.intro.text}
+            </p>
 
-          <p className="text-sm text-gray-warm font-normal italic mb-10 text-center">
-            {t.intro.note}
-          </p>
+            <p className="text-sm text-gray-warm font-normal italic mb-10 max-w-lg">
+              {t.intro.note}
+            </p>
 
-          {/* Three indicators: Centered */}
-          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 pt-6 border-t border-border-subtle w-full max-w-2xl">
-            {t.intro.indicators.map((indicator, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <span className="w-1.5 h-1.5 bg-gold-main shrink-0" />
-                <span className="text-xs uppercase tracking-widest text-cream-text/90 font-medium">
-                  {indicator}
-                </span>
-              </div>
-            ))}
+            {/* Three indicators */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-border-subtle max-w-xl">
+              {t.intro.indicators.map((indicator, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <span className="w-1.5 h-1.5 bg-gold-main shrink-0" />
+                  <span className="text-xs uppercase tracking-widest text-cream-text/90 font-medium">
+                    {indicator}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Centered Image with Safe Margins: Doesn't touch edges */}
-        <div className="max-w-2xl mx-auto px-4">
-          <div
-            ref={imageMaskRef}
-            className="relative overflow-hidden bg-dark-card border border-border-subtle aspect-[16/10] sm:aspect-[16/9] w-full shadow-lg"
-          >
-            <img
-              src={IMAGES.locationImage}
-              alt="Central London location near Victoria Station"
-              className="w-full h-full object-cover object-center filter saturate-[0.8] contrast-[1.1] brightness-[0.85]"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
+          {/* Image Column: Safely bounded, does not touch site edges */}
+          <div className="lg:col-span-5 px-2 sm:px-4">
+            <div
+              ref={imageMaskRef}
+              className="relative overflow-hidden bg-dark-card border border-border-subtle aspect-[4/5] w-full max-w-md mx-auto shadow-2xl"
+            >
+              <img
+                src={IMAGES.locationImage}
+                alt="Central London location near Victoria Station"
+                className="w-full h-full object-cover object-center filter saturate-[0.8] contrast-[1.1] brightness-[0.85]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
+            </div>
           </div>
         </div>
       </div>
