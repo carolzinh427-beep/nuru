@@ -132,12 +132,8 @@ export function Hero3D() {
             {t.hero.title}
           </h1>
 
-          <p className="text-base sm:text-lg text-gray-warm font-light leading-relaxed mb-6 max-w-2xl text-center">
+          <p className="text-base sm:text-lg text-gray-warm font-light leading-relaxed mb-10 max-w-2xl text-center">
             {t.hero.subtitle}
-          </p>
-
-          <p className="text-xs sm:text-sm text-gold-main tracking-widest uppercase mb-10 font-medium text-center">
-            {t.hero.note}
           </p>
 
           {/* CTAs */}
@@ -163,13 +159,8 @@ export function Hero3D() {
       {/* Bottom bar with Animated Scroll Indicator: Centered, safe gutters */}
       <div
         ref={bottomBarRef}
-        className="relative z-20 container-max pb-8 pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between text-xs text-gray-warm tracking-wider gap-4 text-center"
+        className="relative z-20 container-max pb-8 pt-6 border-t border-border-subtle flex items-center justify-center text-xs text-gray-warm tracking-wider text-center"
       >
-        <div className="flex items-center justify-center space-x-2 text-center">
-          <span className="w-1.5 h-1.5 bg-gold-main shrink-0" />
-          <span>10:00 TO 23:00</span>
-        </div>
-
         {/* Clickable Luxury Scroll Indicator */}
         <button
           type="button"

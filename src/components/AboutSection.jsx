@@ -96,19 +96,6 @@ export function AboutSection() {
                   aria-hidden="true"
                 />
 
-                {/* Name Tag */}
-                <div className="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between pointer-events-none">
-                  <div>
-                    <span className="text-[9px] tracking-widest uppercase text-gold-main font-semibold block">
-                      Host & Masseuse
-                    </span>
-                    <span className="font-serif text-xl text-cream-text tracking-wide block">
-                      Thaissa
-                    </span>
-                  </div>
-                  <div className="w-2 h-2 rounded-full bg-gold-main shadow-[0_0_8px_rgba(194,142,66,0.8)]" />
-                </div>
-
                 <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
               </div>
 
@@ -133,19 +120,6 @@ export function AboutSection() {
                   aria-hidden="true"
                 />
 
-                {/* Atmosphere Tag */}
-                <div className="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between pointer-events-none">
-                  <div>
-                    <span className="text-[9px] tracking-widest uppercase text-gold-main font-semibold block">
-                      Sanctuary
-                    </span>
-                    <span className="font-serif text-xl text-cream-text tracking-wide block">
-                      Elegance
-                    </span>
-                  </div>
-                  <div className="w-2 h-2 rounded-full bg-gold-main shadow-[0_0_8px_rgba(194,142,66,0.8)]" />
-                </div>
-
                 <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
               </div>
             </div>
@@ -156,8 +130,6 @@ export function AboutSection() {
             ref={textRef}
             className="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center text-center lg:text-left items-center lg:items-start"
           >
-            <span className="eyebrow mb-4 block">{t.about.eyebrow}</span>
-
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-8">
               {t.about.title}
             </h2>
@@ -170,16 +142,6 @@ export function AboutSection() {
               <p className="text-sm sm:text-base text-gold-light/90 font-normal italic">
                 {t.about.note}
               </p>
-            </div>
-
-            <div className="pt-2">
-              <button
-                type="button"
-                onClick={() => openWhatsapp(whatsappMessages.general)}
-                className="btn-primary"
-              >
-                {t.about.cta}
-              </button>
             </div>
           </div>
         </div>

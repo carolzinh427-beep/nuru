@@ -82,7 +82,7 @@ export const CONTENT = {
     hero: {
       title: "Where darkness meets touch, and touch becomes pleasure",
       subtitle: "Step into a private, gold-lit sanctuary in Central London, near Victoria Station, designed for those who seek more than relaxation",
-      note: "Open every day, 10:00 AM to 11:00 PM",
+      note: "",
       ctaPrimary: "Contact via WhatsApp",
       ctaSecondary: "Explore the massage menu"
     },
@@ -123,11 +123,11 @@ export const CONTENT = {
       ]
     },
     about: {
-      eyebrow: "Your Host and Masseuse",
+      eyebrow: "",
       title: "Sensual Elegance with Thaissa",
       text: "Welcoming you into an intimate, gold-lit sanctuary in Central London, Thaissa offers a deeply sensual and enveloping massage experience where warm oils, gentle presence and exquisite touch awaken every sense in total discretion",
       note: "Exclusive and dedicated attention for every private session",
-      cta: "Meet Thaissa via WhatsApp"
+      cta: ""
     },
     booking: {
       eyebrow: "Online Appointments",
@@ -199,7 +199,7 @@ export const CONTENT = {
     hero: {
       title: "Onde a escuridão encontra o toque, e o toque se torna prazer",
       subtitle: "Entre em um santuário privado e iluminado a ouro no centro de Londres, próximo à Victoria Station, criado para quem busca mais do que relaxamento",
-      note: "Aberto todos os dias, das 10h às 23h",
+      note: "",
       ctaPrimary: "Falar pelo WhatsApp",
       ctaSecondary: "Conhecer as massagens"
     },
@@ -240,11 +240,11 @@ export const CONTENT = {
       ]
     },
     about: {
-      eyebrow: "Sua Anfitriã e Terapeuta",
+      eyebrow: "",
       title: "Elegância Sensual com Thaissa",
       text: "Recebendo você em um santuário íntimo e iluminado a ouro no centro de Londres, Thaissa proporciona uma experiência de massagem profundamente envolvente e sensual, onde óleos aquecidos, presença cativante e toque delicado despertam todos os sentidos com absoluta discrição",
       note: "Atendimento exclusivo e dedicado para cada sessão privativa",
-      cta: "Falar com Thaissa pelo WhatsApp"
+      cta: ""
     },
     booking: {
       eyebrow: "Agendamento Online",
