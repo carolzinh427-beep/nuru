@@ -1,75 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Canvas } from '@react-three/fiber';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { useReducedMotion } from '../hooks/useReducedMotion';
+import { IMAGES } from '../data/content';
 import { openWhatsapp } from '../utils/whatsapp';
-import HeroScene from './HeroScene';
-
-gsap.registerPlugin(ScrollTrigger);
-
-function checkWebGLSupport() {
-  if (typeof window === 'undefined') return false;
-  try {
-    const canvas = document.createElement('canvas');
-    return Boolean(
-      window.WebGLRenderingContext &&
-      (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
-    );
-  } catch {
-    return false;
-  }
-}
 
 export function Hero3D() {
   const { t, whatsappMessages } = useLanguage();
-  const prefersReducedMotion = useReducedMotion();
   const heroRef = useRef(null);
-
-  const [hasWebGL, setHasWebGL] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    setHasWebGL(checkWebGLSupport());
-
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Track scroll progress via GSAP ScrollTrigger
-  useEffect(() => {
-    const el = heroRef.current;
-    if (!el) return;
-
-    const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: el,
-        start: 'top top',
-        end: 'bottom top',
-        onUpdate: (self) => {
-          setScrollProgress(self.progress);
-        },
-      });
-    });
-
-    return () => ctx.revert();
-  }, []);
-
-  const handleMouseMove = (e) => {
-    if (prefersReducedMotion) return;
-    const { clientX, clientY } = e;
-    const x = (clientX / window.innerWidth) * 2 - 1;
-    const y = -(clientY / window.innerHeight) * 2 + 1;
-    setMouse({ x, y });
-  };
 
   const scrollToMenu = () => {
     const menuEl = document.getElementById('menu');
@@ -82,38 +18,26 @@ export function Hero3D() {
     <section
       id="home"
       ref={heroRef}
-      onMouseMove={handleMouseMove}
       className="relative min-h-screen w-full bg-dark-deep text-cream-text overflow-hidden flex flex-col justify-between"
       style={{ minHeight: '100vh' }}
     >
-      {/* 3D Canvas or Static Solid Layered Fallback */}
+      {/* Background Atmosphere: Subtle dark spa imagery with solid overlays only */}
       <div
         className="absolute inset-0 pointer-events-none z-0 overflow-hidden"
         aria-hidden="true"
       >
-        {hasWebGL ? (
-          <Canvas
-            camera={{ position: [0, 0, 5], fov: 45 }}
-            gl={{ alpha: true, antialias: true, powerPreference: 'high-performance' }}
-            dpr={[1, 2]}
-            className="w-full h-full opacity-80 sm:opacity-90"
-          >
-            <HeroScene
-              scrollProgress={scrollProgress}
-              mouse={mouse}
-              isMobile={isMobile}
-              prefersReducedMotion={prefersReducedMotion}
-            />
-          </Canvas>
-        ) : (
-          /* Static solid layered geometric fallback - solid shapes only */
-          <div className="w-full h-full relative flex items-center justify-center">
-            <div className="absolute w-96 h-96 rounded-full bg-dark-card border border-border-subtle -top-12 -right-12" />
-            <div className="absolute w-80 h-80 rounded-full bg-dark-card border border-gold-main/30 top-1/3 right-1/4" />
-            <div className="absolute w-64 h-64 rounded-full bg-dark-deep border border-border-subtle bottom-12 left-1/3" />
-            <div className="w-48 h-48 border border-gold-main/40 rotate-45 transform" />
-          </div>
-        )}
+        <img
+          src={IMAGES.heroImage}
+          alt=""
+          className="w-full h-full object-cover object-center filter brightness-[0.22] contrast-[1.2] saturate-[0.6] opacity-35"
+        />
+        {/* Solid dark tint overlay */}
+        <div className="absolute inset-0 bg-dark-deep/80" />
+
+        {/* Fine gold architectural lines */}
+        <div className="absolute right-12 sm:right-24 top-0 bottom-0 w-[1px] bg-border-subtle/60" />
+        <div className="absolute right-16 sm:right-32 top-1/4 h-64 w-[1px] bg-gold-main/20" />
+        <div className="absolute left-8 bottom-32 w-48 h-[1px] bg-gold-main/15" />
       </div>
 
       {/* Main Hero Content */}
