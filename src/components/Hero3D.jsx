@@ -15,7 +15,6 @@ export function Hero3D() {
   const heroRef = useRef(null);
   const bgImageRef = useRef(null);
   const contentRef = useRef(null);
-  const goldLineRef = useRef(null);
   const bottomBarRef = useRef(null);
   const scrollIndicatorRef = useRef(null);
 
@@ -26,8 +25,8 @@ export function Hero3D() {
       // 1. Subtle parallax on background image
       if (bgImageRef.current) {
         gsap.to(bgImageRef.current, {
-          yPercent: 20,
-          scale: 1.06,
+          yPercent: 18,
+          scale: 1.05,
           ease: 'none',
           scrollTrigger: {
             trigger: heroRef.current,
@@ -41,7 +40,7 @@ export function Hero3D() {
       // 2. Smooth fade and gentle lift on text content as user scrolls
       if (contentRef.current) {
         gsap.to(contentRef.current, {
-          y: -50,
+          y: -45,
           opacity: 0,
           ease: 'none',
           scrollTrigger: {
@@ -53,27 +52,11 @@ export function Hero3D() {
         });
       }
 
-      // 3. Gold vertical architectural line expansion on scroll
-      if (goldLineRef.current) {
-        gsap.to(goldLineRef.current, {
-          scaleY: 1.5,
-          y: 40,
-          transformOrigin: 'top center',
-          ease: 'none',
-          scrollTrigger: {
-            trigger: heroRef.current,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: true,
-          },
-        });
-      }
-
-      // 4. Bottom bar fades out early in the scroll
+      // 3. Bottom bar fades out early in the scroll
       if (bottomBarRef.current) {
         gsap.to(bottomBarRef.current, {
           opacity: 0,
-          y: -25,
+          y: -20,
           ease: 'none',
           scrollTrigger: {
             trigger: heroRef.current,
@@ -84,7 +67,7 @@ export function Hero3D() {
         });
       }
 
-      // 5. Continuous luxury pulse on the scroll line indicator
+      // 4. Continuous luxury pulse on the scroll line indicator
       if (scrollIndicatorRef.current) {
         gsap.fromTo(
           scrollIndicatorRef.current,
@@ -95,7 +78,6 @@ export function Hero3D() {
             repeat: -1,
             duration: 1.8,
             ease: 'power2.inOut',
-            yoyo: false,
           }
         );
       }
@@ -127,60 +109,53 @@ export function Hero3D() {
           ref={bgImageRef}
           src={IMAGES.heroImage}
           alt=""
-          className="w-full h-[120%] object-cover object-center -mt-[10%] filter brightness-[0.22] contrast-[1.2] saturate-[0.6] opacity-35"
+          className="w-full h-[120%] object-cover object-center -mt-[10%] filter brightness-[0.2] contrast-[1.2] saturate-[0.6] opacity-35"
         />
         {/* Solid dark tint overlay */}
-        <div className="absolute inset-0 bg-dark-deep/80" />
-
-        {/* Fine gold architectural lines with scroll reactivity */}
-        <div className="absolute right-12 sm:right-24 top-0 bottom-0 w-[1px] bg-border-subtle/60" />
-        <div
-          ref={goldLineRef}
-          className="absolute right-16 sm:right-32 top-1/4 h-64 w-[1px] bg-gold-main/30"
-        />
-        <div className="absolute left-8 bottom-32 w-48 h-[1px] bg-gold-main/15" />
+        <div className="absolute inset-0 bg-dark-deep/85" />
       </div>
 
-      {/* Main Hero Content with Scroll Fade & Lift */}
+      {/* Main Hero Content: Centered, no edge touching */}
       <div
         ref={contentRef}
-        className="relative z-10 container-max pt-32 sm:pt-40 pb-16 flex-1 flex flex-col justify-center"
+        className="relative z-10 container-max pt-36 sm:pt-44 pb-16 flex-1 flex flex-col justify-center items-center text-center"
       >
-        <div className="max-w-2xl">
+        <div className="max-w-3xl mx-auto flex flex-col items-center text-center px-4">
           {/* Subtle gold indicator */}
-          <div className="inline-flex items-center space-x-3 mb-6">
+          <div className="inline-flex items-center justify-center space-x-3 mb-6">
             <span className="w-8 h-[1px] bg-gold-main inline-block" />
             <span className="text-xs tracking-widest-plus uppercase text-gold-main font-semibold">
-              Central London &bull; Victoria
+              Central London Victoria
             </span>
+            <span className="w-8 h-[1px] bg-gold-main inline-block" />
           </div>
 
           {/* Single H1 on the site */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-cream-text font-normal leading-[1.14] mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-cream-text font-normal leading-[1.14] mb-6 text-center">
             {t.hero.title}
           </h1>
 
-          <p className="text-base sm:text-lg text-gray-warm font-light leading-relaxed mb-6 max-w-xl">
+          <p className="text-base sm:text-lg text-gray-warm font-light leading-relaxed mb-6 max-w-2xl text-center">
             {t.hero.subtitle}
           </p>
 
-          <p className="text-xs sm:text-sm text-gold-main tracking-widest uppercase mb-10 font-medium">
+          <p className="text-xs sm:text-sm text-gold-main tracking-widest uppercase mb-10 font-medium text-center">
             {t.hero.note}
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 items-stretch sm:items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center w-full max-w-md mx-auto">
             <button
               type="button"
               onClick={() => openWhatsapp(whatsappMessages.general)}
-              className="btn-primary"
+              className="btn-primary w-full sm:w-auto"
             >
               {t.hero.ctaPrimary}
             </button>
             <button
               type="button"
               onClick={scrollToMenu}
-              className="btn-secondary"
+              className="btn-secondary w-full sm:w-auto"
             >
               {t.hero.ctaSecondary}
             </button>
@@ -188,24 +163,22 @@ export function Hero3D() {
         </div>
       </div>
 
-      {/* Bottom bar with Animated Scroll Indicator */}
+      {/* Bottom bar with Animated Scroll Indicator: Centered, safe gutters */}
       <div
         ref={bottomBarRef}
-        className="relative z-10 container-max pb-8 pt-4 border-t border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between text-xs text-gray-warm tracking-wider gap-4"
+        className="relative z-10 container-max pb-8 pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between text-xs text-gray-warm tracking-wider gap-4 text-center"
       >
-        <div className="flex items-center space-x-6">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
           <span>CENTRAL LONDON</span>
-          <span className="text-gold-main/40">&bull;</span>
           <span>VICTORIA STATION</span>
-          <span className="text-gold-main/40">&bull;</span>
-          <span>10:00 – 23:00</span>
+          <span>10:00 TO 23:00</span>
         </div>
 
         {/* Clickable Luxury Scroll Indicator */}
         <button
           type="button"
           onClick={scrollToMenu}
-          className="group inline-flex items-center space-x-3 text-gold-main hover:text-gold-light transition-colors cursor-pointer text-left focus-visible:outline-gold-main"
+          className="group inline-flex items-center space-x-3 text-gold-main hover:text-gold-light transition-colors cursor-pointer text-center focus-visible:outline-gold-main"
           aria-label="Scroll to explore massage menu"
         >
           <span className="text-[11px] tracking-widest uppercase font-medium">

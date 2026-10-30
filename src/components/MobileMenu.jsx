@@ -127,17 +127,17 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
         </button>
       </div>
 
-      {/* Nav Links */}
-      <nav className="my-auto py-8">
-        <ul className="flex flex-col space-y-6">
+      {/* Nav Links: Centered */}
+      <nav className="my-auto py-8 text-center">
+        <ul className="flex flex-col space-y-6 items-center">
           {navItems.map((item, idx) => (
             <li key={item.href}>
               <a
                 href={item.href}
                 onClick={handleLinkClick}
-                className="font-serif text-3xl sm:text-4xl text-cream-text hover:text-gold-main transition-colors duration-200 block"
+                className="font-serif text-3xl sm:text-4xl text-cream-text hover:text-gold-main transition-colors duration-200 block text-center"
               >
-                <span className="text-xs text-gold-main/60 font-sans tracking-widest mr-4 inline-block">
+                <span className="text-xs text-gold-main/60 font-sans tracking-widest mr-3 inline-block">
                   0{idx + 1}
                 </span>
                 {item.label}

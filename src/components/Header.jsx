@@ -47,7 +47,7 @@ export function Header() {
           <a
             href="#home"
             className="group flex flex-col focus-visible:outline-gold-main"
-            aria-label="Nuru Massage London - Home"
+            aria-label="Nuru Massage London Home"
           >
             <span className="font-serif text-xl sm:text-2xl tracking-[0.2em] font-normal text-cream-text transition-colors duration-200 group-hover:text-gold-light">
               NURU

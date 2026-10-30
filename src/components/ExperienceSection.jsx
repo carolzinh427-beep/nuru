@@ -63,49 +63,51 @@ export function ExperienceSection() {
       className="py-24 sm:py-32 bg-dark-deep text-cream-text border-b border-border-subtle overflow-hidden"
     >
       <div className="container-max">
-        {/* Header */}
-        <div className="max-w-2xl mb-16 sm:mb-20">
-          <span className="eyebrow mb-4 block">{t.experience.eyebrow}</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight">
+        {/* Header: Centered */}
+        <div className="max-w-2xl mx-auto text-center mb-16 sm:mb-20 px-4">
+          <span className="eyebrow mb-4 block text-center">{t.experience.eyebrow}</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight text-center">
             {t.experience.title}
           </h2>
         </div>
 
-        {/* 3 Pillars */}
+        {/* 3 Pillars: Centered */}
         <div
           ref={pillarsRef}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-20"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-20 max-w-5xl mx-auto px-4"
         >
           {t.experience.pillars.map((pillar) => (
             <div
               key={pillar.number}
-              className="border-t border-border-subtle pt-8 flex flex-col justify-between"
+              className="border-t border-border-subtle pt-8 flex flex-col items-center text-center"
             >
-              <div>
-                <span className="font-serif text-4xl sm:text-5xl text-gold-main block mb-4 font-normal">
+              <div className="flex flex-col items-center">
+                <span className="font-serif text-4xl sm:text-5xl text-gold-main block mb-4 font-normal text-center">
                   {pillar.number}
                 </span>
-                <h3 className="text-xl sm:text-2xl font-serif text-cream-text font-normal mb-3">
+                <h3 className="text-xl sm:text-2xl font-serif text-cream-text font-normal mb-3 text-center">
                   {pillar.title}
                 </h3>
               </div>
-              <p className="text-sm sm:text-base text-gray-warm font-light leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-warm font-light leading-relaxed text-center max-w-xs">
                 {pillar.text}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Full-width Treatment Room Image with Parallax container */}
-        <div className="relative aspect-[21/9] min-h-[300px] overflow-hidden bg-dark-card border border-border-subtle">
-          <img
-            ref={parallaxImgRef}
-            src={IMAGES.treatmentRoomImage}
-            alt="Discreet, clean massage environment"
-            className="w-full h-[120%] object-cover object-center -mt-[10%] filter saturate-[0.8] contrast-[1.1] brightness-[0.8]"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
+        {/* Treatment Room Image: Centered with safe margins, NOT touching viewport edges */}
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="relative aspect-[16/9] min-h-[260px] sm:min-h-[340px] overflow-hidden bg-dark-card border border-border-subtle shadow-xl">
+            <img
+              ref={parallaxImgRef}
+              src={IMAGES.treatmentRoomImage}
+              alt="Discreet, clean massage environment"
+              className="w-full h-[120%] object-cover object-center -mt-[10%] filter saturate-[0.8] contrast-[1.1] brightness-[0.8]"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 border border-gold-main/20 pointer-events-none" />
+          </div>
         </div>
       </div>
     </section>

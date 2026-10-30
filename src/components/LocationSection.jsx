@@ -11,65 +11,50 @@ export function LocationSection() {
       className="py-24 sm:py-32 bg-dark-deep text-cream-text border-b border-border-subtle"
     >
       <div className="container-max">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Text and Details */}
-          <div className="lg:col-span-6 flex flex-col justify-center">
-            <span className="eyebrow mb-4 block">{t.location.eyebrow}</span>
+        <div className="max-w-3xl mx-auto flex flex-col items-center text-center px-4">
+          <span className="eyebrow mb-4 block text-center">{t.location.eyebrow}</span>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-8">
-              {t.location.title}
-            </h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-8 text-center">
+            {t.location.title}
+          </h2>
 
-            <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-10">
-              {t.location.text}
-            </p>
+          <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-10 text-center max-w-2xl">
+            {t.location.text}
+          </p>
 
-            {/* Indicator blocks */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-              <div className="border border-border-subtle p-5 bg-dark-card">
-                <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold">
-                  Area
-                </span>
-                <span className="text-sm font-medium text-cream-text block">
-                  {t.location.labels.area}
-                </span>
-              </div>
-
-              <div className="border border-border-subtle p-5 bg-dark-card">
-                <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold">
-                  Access
-                </span>
-                <span className="text-sm font-medium text-cream-text block">
-                  {t.location.labels.near}
-                </span>
-              </div>
-
-              <div className="border border-border-subtle p-5 bg-dark-card">
-                <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold">
-                  Hours
-                </span>
-                <span className="text-sm font-medium text-cream-text block">
-                  {t.location.labels.hours}
-                </span>
-              </div>
+          {/* Indicator blocks: Centered */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 w-full max-w-2xl">
+            <div className="border border-border-subtle p-5 bg-dark-card flex flex-col items-center text-center">
+              <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold text-center">
+                Area
+              </span>
+              <span className="text-sm font-medium text-cream-text block text-center">
+                {t.location.labels.area}
+              </span>
             </div>
 
-            {/* Google Maps CTA */}
-            <div>
-              <a
-                href={COMPANY.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                {t.location.cta}
-              </a>
+            <div className="border border-border-subtle p-5 bg-dark-card flex flex-col items-center text-center">
+              <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold text-center">
+                Access
+              </span>
+              <span className="text-sm font-medium text-cream-text block text-center">
+                {t.location.labels.near}
+              </span>
+            </div>
+
+            <div className="border border-border-subtle p-5 bg-dark-card flex flex-col items-center text-center">
+              <span className="text-[10px] tracking-widest uppercase text-gold-main block mb-1 font-semibold text-center">
+                Hours
+              </span>
+              <span className="text-sm font-medium text-cream-text block text-center">
+                {t.location.labels.hours}
+              </span>
             </div>
           </div>
 
-          {/* Right: Stylized Minimalist Map Placeholder (Solid Palette Colors) */}
-          <div className="lg:col-span-6">
-            <div className="relative aspect-[4/3] bg-dark-card border border-border-subtle overflow-hidden p-6 sm:p-8 flex flex-col justify-between shadow-lg">
+          {/* Centered Map Card with safe gutters */}
+          <div className="w-full max-w-2xl mx-auto mb-10 px-2 sm:px-4">
+            <div className="relative aspect-[16/10] sm:aspect-[16/9] bg-dark-card border border-border-subtle overflow-hidden p-6 sm:p-8 flex flex-col justify-between shadow-xl">
               {/* Minimalist SVG Street Grid */}
               <svg
                 className="absolute inset-0 w-full h-full text-border-subtle"
@@ -110,23 +95,35 @@ export function LocationSection() {
               {/* Top tag */}
               <div className="relative z-10 flex justify-between items-start">
                 <div className="bg-dark-deep border border-border-subtle text-gold-main px-3 py-1.5 text-[11px] tracking-widest uppercase font-medium">
-                  Central London &bull; SW1
+                  Central London SW1
                 </div>
                 <div className="bg-dark-card border border-border-subtle px-3 py-1.5 text-[11px] tracking-wider text-gray-warm">
                   Victoria Station
                 </div>
               </div>
 
-              {/* Pin card bottom */}
-              <div className="relative z-10 bg-dark-deep border border-border-subtle p-4 max-w-xs shadow-md">
-                <span className="font-serif text-lg text-cream-text block font-medium">
+              {/* Pin card bottom: Centered */}
+              <div className="relative z-10 bg-dark-deep border border-border-subtle p-4 max-w-xs mx-auto shadow-md text-center">
+                <span className="font-serif text-lg text-cream-text block font-medium text-center">
                   Victoria Station Area
                 </span>
-                <span className="text-xs text-gray-warm font-light block mt-1">
-                  Walking distance from underground and rail connections.
+                <span className="text-xs text-gray-warm font-light block mt-1 text-center">
+                  Walking distance from underground and rail connections
                 </span>
               </div>
             </div>
+          </div>
+
+          {/* Google Maps CTA */}
+          <div>
+            <a
+              href={COMPANY.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              {t.location.cta}
+            </a>
           </div>
         </div>
       </div>

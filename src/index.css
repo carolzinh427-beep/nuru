@@ -130,24 +130,24 @@
   }
 
   .container-max {
-    max-width: 1200px;
+    max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
 
   @media (min-width: 640px) {
     .container-max {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container-max {
-      padding-left: 3rem;
-      padding-right: 3rem;
+      padding-left: 4.5rem;
+      padding-right: 4.5rem;
     }
   }
 }
