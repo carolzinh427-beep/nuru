@@ -47,8 +47,6 @@ export function ContactSection() {
     >
       <div className="container-max">
         <div ref={contentRef} className="max-w-3xl mx-auto flex flex-col items-center text-center px-4">
-          <span className="eyebrow mb-4 inline-block text-center">{t.contact.eyebrow}</span>
-
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif text-cream-text font-normal leading-tight mb-8 text-center">
             {t.contact.title}
           </h2>

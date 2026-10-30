@@ -91,18 +91,12 @@ export function IntroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Text Column */}
           <div ref={textColRef} className="lg:col-span-7 flex flex-col justify-center">
-            <span className="eyebrow mb-4 block">{t.intro.eyebrow}</span>
-
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-8">
               {t.intro.title}
             </h2>
 
-            <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-6 max-w-xl">
+            <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-8 max-w-xl">
               {t.intro.text}
-            </p>
-
-            <p className="text-sm text-gray-warm font-normal italic mb-10 max-w-lg">
-              {t.intro.note}
             </p>
 
             {/* Three indicators */}

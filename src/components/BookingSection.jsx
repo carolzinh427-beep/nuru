@@ -113,10 +113,6 @@ export function BookingSection() {
     >
       <div className="container-max">
         <div className="max-w-2xl mx-auto flex flex-col items-center text-center px-4">
-          <span className="eyebrow mb-4 block text-center">
-            {t.booking.eyebrow}
-          </span>
-
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-4 text-center">
             {t.booking.title}
           </h2>

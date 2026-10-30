@@ -70,8 +70,6 @@ export function LocationSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Text Column */}
           <div ref={leftColRef} className="lg:col-span-6 flex flex-col justify-center">
-            <span className="eyebrow mb-4 block">{t.location.eyebrow}</span>
-
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight mb-8">
               {t.location.title}
             </h2>

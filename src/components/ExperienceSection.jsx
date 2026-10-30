@@ -65,7 +65,6 @@ export function ExperienceSection() {
       <div className="container-max">
         {/* Header: Centered */}
         <div className="max-w-2xl mx-auto text-center mb-16 sm:mb-20 px-4">
-          <span className="eyebrow mb-4 block text-center">{t.experience.eyebrow}</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream-text font-normal leading-tight text-center">
             {t.experience.title}
           </h2>
