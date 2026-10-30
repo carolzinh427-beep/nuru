@@ -12,7 +12,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
+      if (window.scrollY > 25) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -36,10 +36,10 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-out ${
           isScrolled
-            ? 'bg-dark-deep/95 backdrop-blur-md border-b border-border-subtle py-3 text-cream-text'
-            : 'bg-transparent py-5 text-cream-text'
+            ? 'bg-dark-deep/75 backdrop-blur-xl border-b border-gold-main/25 py-3.5 shadow-[0_10px_35px_rgba(0,0,0,0.5)] text-cream-text'
+            : 'bg-dark-deep/40 backdrop-blur-md border-b border-white/[0.05] py-5 text-cream-text'
         }`}
       >
         <div className="container-max flex items-center justify-between">
@@ -49,10 +49,10 @@ export function Header() {
             className="group flex flex-col focus-visible:outline-gold-main"
             aria-label="Nuru Massage London Home"
           >
-            <span className="font-serif text-xl sm:text-2xl tracking-[0.2em] font-normal text-cream-text transition-colors duration-200 group-hover:text-gold-light">
+            <span className="font-serif text-xl sm:text-2xl tracking-[0.2em] font-normal text-cream-text transition-colors duration-300 group-hover:text-gold-light">
               NURU
             </span>
-            <span className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase -mt-1 font-medium text-gold-main">
+            <span className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase -mt-1 font-medium text-gold-main transition-colors duration-300 group-hover:text-gold-light">
               MASSAGE LONDON
             </span>
           </a>
@@ -66,20 +66,20 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-xs tracking-widest uppercase text-gray-warm hover:text-gold-main transition-colors duration-200"
+                className="text-xs tracking-widest uppercase text-gray-warm hover:text-gold-main transition-colors duration-300 relative py-1"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* Desktop Right: Language + CTA */}
+          {/* Desktop Right: Language + Glassmorphic CTA */}
           <div className="hidden md:flex items-center space-x-6">
             <LanguageSwitcher isScrolled={isScrolled} />
             <button
               type="button"
               onClick={() => openWhatsapp(whatsappMessages.general)}
-              className="text-xs tracking-wider uppercase px-4 py-2.5 transition-colors duration-200 border border-gold-main/80 text-gold-main hover:bg-gold-main hover:text-dark-deep font-medium"
+              className="text-xs tracking-wider uppercase px-5 py-2.5 transition-all duration-300 border border-gold-main/60 bg-dark-deep/40 backdrop-blur-sm text-gold-main hover:bg-gold-main hover:text-dark-deep hover:border-gold-main font-medium shadow-[0_2px_12px_rgba(212,175,55,0.15)]"
             >
               {t.nav.cta}
             </button>
@@ -94,7 +94,7 @@ export function Header() {
               onClick={() => setIsMobileMenuOpen(true)}
               aria-label="Open navigation menu"
               aria-expanded={isMobileMenuOpen}
-              className="p-2 text-cream-text hover:text-gold-main transition-colors duration-200"
+              className="p-2 text-cream-text hover:text-gold-main transition-colors duration-300 focus-visible:outline-gold-main"
             >
               <svg
                 className="w-6 h-6"
