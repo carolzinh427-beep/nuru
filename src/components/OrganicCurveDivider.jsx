@@ -219,3 +219,4 @@ export function OrganicCurveDivider({ variant = 'silk', className = '', flip = f
 }
 
 export default OrganicCurveDivider;
+

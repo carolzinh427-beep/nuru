@@ -5,6 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { useReducedMotion } from '../hooks/useReducedMotion';
 import { IMAGES } from '../data/content';
 import { openWhatsapp } from '../utils/whatsapp';
+import { HeroLigatureTitle } from './HeroLigatureTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -127,12 +128,11 @@ export function Hero3D() {
         className="relative z-20 container-max pt-36 sm:pt-44 pb-16 flex-1 flex flex-col justify-center items-center text-center"
       >
         <div className="max-w-3xl mx-auto flex flex-col items-center text-center px-4">
-          {/* Single H1 on the site */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-cream-text font-normal leading-[1.14] mb-6 text-center">
-            {t.hero.title}
-          </h1>
+          {/* Single H1 on the site: Art Nouveau Ligature Typography */}
+          <HeroLigatureTitle title={t.hero.title} />
 
-          <p className="text-base sm:text-lg text-gray-warm font-light leading-relaxed mb-10 max-w-2xl text-center">
+          {/* Subtitle: Simple, highly legible font creating editorial perfumery contrast */}
+          <p className="text-base sm:text-lg text-gray-warm font-light leading-relaxed mb-10 max-w-2xl text-center font-sans tracking-wide">
             {t.hero.subtitle}
           </p>
 

@@ -31,6 +31,8 @@ export default {
       fontFamily: {
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        italiana: ['"Italiana"', 'Georgia', 'serif'],
+        bodoni: ['"Bodoni Moda"', 'Georgia', 'serif'],
       },
       letterSpacing: {
         'widest-plus': '0.28em',

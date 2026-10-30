@@ -80,8 +80,8 @@ export const CONTENT = {
       cta: "Contact via WhatsApp"
     },
     hero: {
-      title: "Where darkness meets touch, and touch becomes pleasure",
-      subtitle: "Step into a private, gold-lit sanctuary in Central London, near Victoria Station, designed for those who seek more than relaxation",
+      title: "The Art of Touch",
+      subtitle: "Discover a world of warmth, tranquility and intimate relaxation",
       note: "",
       ctaPrimary: "Contact via WhatsApp",
       ctaSecondary: "Explore the massage menu"
@@ -197,8 +197,8 @@ export const CONTENT = {
       cta: "Falar pelo WhatsApp"
     },
     hero: {
-      title: "Onde a escuridão encontra o toque, e o toque se torna prazer",
-      subtitle: "Entre em um santuário privado e iluminado a ouro no centro de Londres, próximo à Victoria Station, criado para quem busca mais do que relaxamento",
+      title: "The Art of Touch",
+      subtitle: "Descubra um mundo de calor, tranquilidade e relaxamento íntimo",
       note: "",
       ctaPrimary: "Falar pelo WhatsApp",
       ctaSecondary: "Conhecer as massagens"
