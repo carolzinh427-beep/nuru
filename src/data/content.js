@@ -91,7 +91,7 @@ export const CONTENT = {
       title: "An intimate space, hidden in plain sight",
       text: "Behind a quiet door near Victoria Station lies a space built entirely for sensation, low light, warm gold, and complete privacy",
       note: "Your comfort, privacy and well-being are always a priority",
-      indicators: ["Near Victoria Station", "Open every day", "10 AM to 11 PM"]
+      indicators: ["Near Victoria Station", "Open every day", "Complete privacy"]
     },
     menu: {
       eyebrow: "Massage Menu",
@@ -132,7 +132,7 @@ export const CONTENT = {
     booking: {
       eyebrow: "Online Appointments",
       title: "Book with Thaissa",
-      subtitle: "Private bookings every day from 10:00 AM to 11:00 PM in Central London",
+      subtitle: "Private bookings every day in Central London",
       hoursBadge: "Open Daily 10:00 AM to 11:00 PM",
       nameLabel: "Your Name",
       namePlaceholder: "Enter your full name",
@@ -208,7 +208,7 @@ export const CONTENT = {
       title: "Um espaço íntimo, escondido aos olhos de todos",
       text: "Atrás de uma porta discreta perto da Victoria Station está um espaço criado inteiramente para a sensação, pouca luz, ouro quente e total privacidade",
       note: "Seu conforto, sua privacidade e seu bem-estar são sempre prioridade",
-      indicators: ["Próximo à Victoria Station", "Aberto todos os dias", "10h às 23h"]
+      indicators: ["Próximo à Victoria Station", "Aberto todos os dias", "Privacidade total"]
     },
     menu: {
       eyebrow: "Cardápio de Massagens",
@@ -249,7 +249,7 @@ export const CONTENT = {
     booking: {
       eyebrow: "Agendamento Online",
       title: "Agende com Thaissa",
-      subtitle: "Atendimento privativo todos os dias das 10h às 23h no centro de Londres",
+      subtitle: "Atendimento privativo todos os dias no centro de Londres",
       hoursBadge: "Aberto Todos os Dias das 10h às 23h",
       nameLabel: "Seu Nome",
       namePlaceholder: "Digite seu nome completo",

@@ -6,23 +6,30 @@ import MobileMenu from './MobileMenu';
 
 export function Header() {
   const { t, whatsappMessages } = useLanguage();
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const hamburgerButtonRef = useRef(null);
 
   useEffect(() => {
+    // Appear 1 second (1000ms) after opening the site
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1000);
+
+    // Or appear immediately if user scrolls
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      if (window.scrollY > 20) {
+        setIsVisible(true);
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const navLinks = [
@@ -36,10 +43,10 @@ export function Header() {
 
   return (
     <>
-      {/* Desktop Floating Navbar: Centered pill appearing upon scroll */}
+      {/* Desktop Floating Navbar: Centered pill appearing 1s after load or upon scroll */}
       <header
-        className={`hidden md:flex fixed top-4 sm:top-5 left-0 right-0 z-40 justify-center px-4 sm:px-6 transition-all duration-500 ease-out ${
-          isScrolled
+        className={`hidden md:flex fixed top-4 sm:top-5 left-0 right-0 z-40 justify-center px-4 sm:px-6 transition-all duration-700 ease-out ${
+          isVisible
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 -translate-y-8 pointer-events-none'
         }`}
@@ -76,7 +83,7 @@ export function Header() {
 
           {/* Desktop Right: Language + Instagram + Floating CTA */}
           <div className="flex items-center space-x-4">
-            <LanguageSwitcher isScrolled={isScrolled} />
+            <LanguageSwitcher isScrolled={isVisible} />
             <a
               href="https://instagram.com/nurumassagelondon"
               target="_blank"
@@ -99,12 +106,12 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile Top-Left Corner: Floating Glass Brand Logo */}
+      {/* Mobile Top-Left Corner: Floating Glass Brand Logo (appears after 1s or on scroll) */}
       <div
-        className={`fixed top-3 left-3 sm:top-4 sm:left-4 z-40 md:hidden transition-all duration-500 ease-out ${
-          isScrolled
+        className={`fixed top-3 left-3 sm:top-4 sm:left-4 z-40 md:hidden transition-all duration-700 ease-out ${
+          isVisible
             ? 'opacity-100 translate-y-0 pointer-events-auto'
-            : 'opacity-90 translate-y-0 pointer-events-auto'
+            : 'opacity-0 -translate-y-8 pointer-events-none'
         }`}
       >
         <a
@@ -120,12 +127,12 @@ export function Header() {
         </a>
       </div>
 
-      {/* Mobile Top-Right Corner: Floating Glass Navbar Pill */}
+      {/* Mobile Top-Right Corner: Floating Glass Navbar Pill (appears after 1s or on scroll) */}
       <div
-        className={`fixed top-3 right-3 sm:top-4 sm:right-4 z-40 md:hidden transition-all duration-500 ease-out ${
-          isScrolled
+        className={`fixed top-3 right-3 sm:top-4 sm:right-4 z-40 md:hidden transition-all duration-700 ease-out ${
+          isVisible
             ? 'opacity-100 translate-y-0 pointer-events-auto'
-            : 'opacity-95 translate-y-0 pointer-events-auto'
+            : 'opacity-0 -translate-y-8 pointer-events-none'
         }`}
       >
         <div className="rounded-full bg-dark-deep/85 backdrop-blur-2xl border border-gold-main/40 text-cream-text shadow-[0_8px_32px_rgba(0,0,0,0.85),0_0_24px_rgba(194,142,66,0.18)] px-3 py-1.5 flex items-center space-x-2.5">

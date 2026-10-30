@@ -16,8 +16,6 @@ export function Hero3D() {
   const heroRef = useRef(null);
   const bgImageRef = useRef(null);
   const contentRef = useRef(null);
-  const bottomBarRef = useRef(null);
-  const scrollIndicatorRef = useRef(null);
 
   useEffect(() => {
     if (prefersReducedMotion) return;
@@ -52,36 +50,6 @@ export function Hero3D() {
           },
         });
       }
-
-      // 3. Bottom bar fades out early in the scroll
-      if (bottomBarRef.current) {
-        gsap.to(bottomBarRef.current, {
-          opacity: 0,
-          y: -20,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: heroRef.current,
-            start: 'top top',
-            end: '35% top',
-            scrub: true,
-          },
-        });
-      }
-
-      // 4. Continuous luxury pulse on the scroll line indicator
-      if (scrollIndicatorRef.current) {
-        gsap.fromTo(
-          scrollIndicatorRef.current,
-          { y: -16, opacity: 0 },
-          {
-            y: 16,
-            opacity: 1,
-            repeat: -1,
-            duration: 1.8,
-            ease: 'power2.inOut',
-          }
-        );
-      }
     }, heroRef);
 
     return () => ctx.revert();
@@ -98,7 +66,7 @@ export function Hero3D() {
     <section
       id="home"
       ref={heroRef}
-      className="relative min-h-screen w-full bg-dark-deep text-cream-text overflow-hidden flex flex-col justify-between"
+      className="relative min-h-screen w-full bg-dark-deep text-cream-text overflow-hidden flex flex-col justify-center"
       style={{ minHeight: '100vh' }}
     >
       {/* Background Massage Image with Parallax and Elegant Bottom Shadow */}
@@ -154,30 +122,6 @@ export function Hero3D() {
             </button>
           </div>
         </div>
-      </div>
-
-      {/* Bottom bar with Animated Scroll Indicator: Centered, safe gutters */}
-      <div
-        ref={bottomBarRef}
-        className="relative z-20 container-max pb-6 pt-4 flex items-center justify-center text-xs text-gray-warm tracking-wider text-center"
-      >
-        {/* Clickable Luxury Scroll Indicator */}
-        <button
-          type="button"
-          onClick={scrollToMenu}
-          className="group inline-flex items-center space-x-3 text-gold-main hover:text-gold-light transition-colors cursor-pointer text-center focus-visible:outline-gold-main"
-          aria-label="Scroll to explore massage menu"
-        >
-          <span className="text-[11px] tracking-widest uppercase font-medium">
-            SCROLL TO EXPLORE
-          </span>
-          <div className="w-[1px] h-7 bg-border-subtle relative overflow-hidden flex items-center justify-center rounded-full">
-            <div
-              ref={scrollIndicatorRef}
-              className="w-[2px] h-3 bg-gold-main absolute top-0 rounded-full"
-            />
-          </div>
-        </button>
       </div>
     </section>
   );

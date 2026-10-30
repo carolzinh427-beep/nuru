@@ -121,17 +121,9 @@ export function BookingSection() {
             {t.booking.title}
           </h2>
 
-          <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-6 text-center max-w-xl">
+          <p className="text-base sm:text-lg text-cream-text/90 font-light leading-relaxed mb-10 text-center max-w-xl">
             {t.booking.subtitle}
           </p>
-
-          {/* Operating hours badge: 10:00 to 23:00 */}
-          <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 border border-gold-main/30 bg-dark-card rounded-full mb-12">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold-main" />
-            <span className="text-xs uppercase tracking-widest text-gold-main font-medium">
-              {t.booking.hoursBadge}
-            </span>
-          </div>
 
           {/* Booking Card */}
           <div
@@ -189,7 +181,7 @@ export function BookingSection() {
                     htmlFor="booking-time"
                     className="block text-xs uppercase tracking-wider text-gray-warm mb-2 font-medium"
                   >
-                    {t.booking.timeLabel} (10h - 23h)
+                    {t.booking.timeLabel}
                   </label>
                   <select
                     id="booking-time"
