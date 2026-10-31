@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nuru-massage-london.vercel.app/sitemap.xml
