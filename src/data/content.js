@@ -1,5 +1,6 @@
 export const COMPANY = {
   name: "Nuru Massage London",
+  websiteUrl: "https://nurumassagelondon.uk",
   whatsappNumber: "447561576379",
   whatsappDisplay: "+44 7561 576379",
   mapsUrl: "https://maps.app.goo.gl/TpG78Kb4h8DY3kZLA",
